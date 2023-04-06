@@ -131,42 +131,42 @@
         alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
     </section>
     <section class="feedback">
-      <div class="feedback__container">
-        <header class="feedback__header">
+      <div class="feedback__wrapper">
+        <header class="feedback-header">
           <h2 class="feedback-header__title title">Оставьте свой отзыв</h2>
           <p class="feedback-header__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а
             также о посещенных вами достопримечательностях</p>
         </header>
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
-          <fieldset class="feedback_name">
+          <fieldset class="feedback-form__field fieldset-feedback">
             <legend class="feedback__title title">Представьтесь:</legend>
-            <div class="feedback__wrapper">
+            <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="name">Имя*:</label>
               <input class="feedback__field field" type="text" id="name" name="name" placeholder="Иван" required>
             </div>
-            <div class="feedback__wrapper">
+            <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="surname">Фамилия*:</label>
               <input class="feedback__field field" type="text" id="surname" name="surname" placeholder="Иванов" required>
             </div>
-            <div class="feedback__wrapper">
+            <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="patronymic">Отчество:</label>
               <input class="feedback__field field" type="text" id="patronymic" name="patronymic" placeholder="Иванович">
             </div>
           </fieldset>
-          <fieldset class="feedback__contacts">
+          <fieldset class="feedback-form__field fieldset-feedback">
             <legend class="feedback__title title">Контактная информация:</legend>
-            <div class="feedback__wrapper">
+            <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="contacts-phone">Контактный телефон*:</label>
               <input class="feedback__field field field--phone" type="text" id="contacts-phone"
                 name="contacts-phone" placeholder="Введите телефон" required>
             </div>
-            <div class="feedback__wrapper">
+            <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="e-mail">Электронная почта*:</label>
               <input class="feedback__field field field--email" type="email" id="e-mail" name="e-mail"
                 placeholder="Введите e-mail" required>
             </div>
           </fieldset>
-          <fieldset class="feedback__impressions">
+          <fieldset class="feedback-form__field fieldset-feedback">
             <legend class="feedback__title title">Ваше общее впечатление:</legend>
             <ul class="feedback__list">
               <li class="feedback__item">
@@ -193,7 +193,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="feedback__attractions">
+          <fieldset class="feedback-form__field fieldset-feedback">
             <legend class="feedback__title title">Посещенные достопримечательности:</legend>
             <ul class="feedback__list">
               <li class="feedback__item">
@@ -226,13 +226,13 @@
               </li>
             </ul>
           </fieldset>
-          <div class="feedback__emotions">
+          <div class="feedback-form__field fieldset-feedback">
             <label class="feedback__title title" for="emotions">Опишите свои эмоции:</label>
             <textarea class="feedback__field field" id="emotions" name="emotions" rows="" cols=""
               placeholder="Опишите подробно все свои восторги" required></textarea>
           </div>
-          <button class="feedback_button button" type="submit">Отправить отзыв</button>
-          <span class="feedback__required-field">* — обязательные поля</span>
+          <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
+          <span class="feedback-form__required-field">* — обязательные поля</span>
         </form>
       </div>
     </section>
@@ -243,18 +243,23 @@
         <h2 class="visually-hidden">Посетите наш городок!</h2>
         <a class="contacts__link link" href="#">#visitSEDONA</a>
       </div>
-      <div class="main-footer__social social">
+      <div class="main-footer__social">
         <h2 class="visually-hidden">Давайте дружить!</h2>
-        <ul class="social__list list-network">
+        <ul class="list-network">
           <li class="list-network__item">
-            <a class="list-network__link list-network__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+            <a class="list-network__link list-network__link--vkontakte" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Мы в Вконтакте</span>
+            </a>
           </li>
           <li class="list-network__item">
-            <a class="list-network__link list-network__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+            <a class="list-network__link list-network__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Мы в Телеграмме</span>
+            </a>
           </li>
           <li class="list-network__item">
-            <a class="list-network__link list-network__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы
-              в Ютубе</a>
+            <a class="list-network__link list-network__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Мы в Ютюбе</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -266,22 +271,21 @@
       </div>
     </div>
   </footer>
-  <div class="modal-error-container modal-error-container--close">
-    <div class="modal-error-container__wrapper modal-error modal-error--open">
-      <h2 class="modal__title title">Что-то пошло не так!</h2>
-      <p class="modal__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
+  <div class="modal-container modal-container__open">
+    <div class="modal-container__wrapper">
+      <div class="modal-container__error modal-error modal-error--open">
+        <h2 class="modal-error__title title">Что-то пошло не так!</h2>
+        <p class="modal-error__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
         заполнить</p>
-      <button class="modal__button button" type="button">OK</button>
+        <button class="modal-error__button button" type="button">OK</button>
+      </div>
+      <div class="modal-container__normal modal-normal modal-normal--open">
+        <h2 class="modal-normal__title title">Ваш отзыв отправлен!</h2>
+        <p class="modal-normal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В
+          ближайшее время мы опубликуем его на сайте</p>
+        <button class="modal-normal__button button" type="button">Закрыть окно</button>
+      </div>
     </div>
-  </div>
-  <div class="modal-normal-container modal-normal-container--close"></div>
-  <div class="modal-normal-container__wrapper modal-normal modal-normal--open">
-    <h2 class="modal__title title">Ваш отзыв отправлен!</h2>
-    <p class="modal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В
-      ближайшее
-      время мы опубликуем его на сайте</p>
-    <button class="modal__button button" type="button">Закрыть окно</button>
-  </div>
   </div>
 </body>
 
