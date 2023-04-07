@@ -132,14 +132,14 @@
     </section>
     <section class="feedback">
       <div class="feedback__wrapper">
-        <header class="feedback-header">
+        <header class="feedback__header feedback-header">
           <h2 class="feedback-header__title title">Оставьте свой отзыв</h2>
           <p class="feedback-header__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а
             также о посещенных вами достопримечательностях</p>
         </header>
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="feedback-form__field fieldset-feedback">
-            <legend class="feedback__title title">Представьтесь:</legend>
+            <h3 class="feedback__title title">Представьтесь:</h3>
             <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="name">Имя*:</label>
               <input class="feedback__field field" type="text" id="name" name="name" placeholder="Иван" required>
@@ -154,7 +154,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback-form__field fieldset-feedback">
-            <legend class="feedback__title title">Контактная информация:</legend>
+            <h3 class="feedback__title title">Контактная информация:</h3>
             <div class="feedback__container container-about">
               <label class="feedback__signature signature" for="contacts-phone">Контактный телефон*:</label>
               <input class="feedback__field field field--phone" type="text" id="contacts-phone"
@@ -167,7 +167,7 @@
             </div>
           </fieldset>
           <fieldset class="feedback-form__field fieldset-feedback">
-            <legend class="feedback__title title">Ваше общее впечатление:</legend>
+            <h3 class="feedback__title title">Ваше общее впечатление:</h3>
             <ul class="feedback__list">
               <li class="feedback__item">
                 <label class="feedback__control">
@@ -194,7 +194,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback-form__field fieldset-feedback">
-            <legend class="feedback__title title">Посещенные достопримечательности:</legend>
+            <h3 class="feedback__title title">Посещенные достопримечательности:</h3>
             <ul class="feedback__list">
               <li class="feedback__item">
                 <label class="feedback__control">
@@ -226,13 +226,13 @@
               </li>
             </ul>
           </fieldset>
-          <div class="feedback-form__field fieldset-feedback">
-            <label class="feedback__title title" for="emotions">Опишите свои эмоции:</label>
+          <fieldset class="feedback-form__field fieldset-feedback">
+            <h3 class="feedback__title title" for="emotions">Опишите свои эмоции:</h3>
             <textarea class="feedback__field field" id="emotions" name="emotions" rows="" cols=""
               placeholder="Опишите подробно все свои восторги" required></textarea>
-          </div>
-          <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
-          <span class="feedback-form__required-field">* — обязательные поля</span>
+          </fieldset>
+          <button class="feedback__button button" type="submit">Отправить отзыв</button>
+          <span class="feedback__signature-field signature signature--right">* — обязательные поля</span>
         </form>
       </div>
     </section>
@@ -271,18 +271,20 @@
       </div>
     </div>
   </footer>
-  <div class="modal-container modal-container__open">
-    <div class="modal-container__wrapper">
-      <div class="modal-container__error modal-error modal-error--open">
-        <h2 class="modal-error__title title">Что-то пошло не так!</h2>
-        <p class="modal-error__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
-        заполнить</p>
-        <button class="modal-error__button button" type="button">OK</button>
-      </div>
-      <div class="modal-container__normal modal-normal modal-normal--open">
+  <div class="modal-container modal-container--close">
+    <div class="modal-container__error modal-error">
+      <h2 class="modal-error__title title">Что-то пошло не так!</h2>
+      <p class="modal-error__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
+      заполнить</p>
+      <button class="modal-error__button button" type="button">OK</button>
+    </div>
+    <div class="modal-container__normal modal-normal modal--current">
+      <div class="modal-normal__wrapper">
         <h2 class="modal-normal__title title">Ваш отзыв отправлен!</h2>
         <p class="modal-normal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В
           ближайшее время мы опубликуем его на сайте</p>
+      </div>
+      <div class="modal-normal__wrapper-button modal-normal__wrapper-button--creative">
         <button class="modal-normal__button button" type="button">Закрыть окно</button>
       </div>
     </div>
