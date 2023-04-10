@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -98,7 +99,7 @@
             fill="white" />
         </svg>
       </a>
-      <button class="main-navigation__toggle" type="button">
+      <button class="main-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <nav class="main-header__navigation main-navigation main-navigation__open">
@@ -123,13 +124,15 @@
       </nav>
     </div>
   </header>
-  <main class="main-index">
-    <div class="main-index__wrapper">
+  <main class="main-inner">
+    <div class="main-inner__wrapper">
       <h1 class="visually-hidden">Достопримечательности города Седоны</h1>
       <section class="hero hero--vector hero--title">
-        <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
-        <img class="hero__image hero__image--vector" src="img/Sedona_mountains.jpg" width="1200" height="518"
-        alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+        <div class="hero__wrapper">
+          <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
+          <img class="hero__image hero__image--vector" src="img/Sedona_mountains.jpg" width="1200" height="518"
+          alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+        </div>
       </section>
       <section class="foto-about">
         <div class="foto-about__wrapper">
@@ -140,14 +143,16 @@
               помогут вам забыть о политике и экономике</p>
           </div>
           <ul class="foto-about__list list-picture">
-            <li class="list-picture__item">
+            <li class="list-picture__item-long">
               <a class="list-picture__link" href="#">
                 <img class="list-picture__image" src="img/catalog/foto_sunset.jpg" width="1200" height="400"
                   alt="Фотография дороги в седону на фоне заката.">
               </a>
-              <div class="list-picture__about about-image">
-                <h4 class="about-image__title title title--left">Неродные просторы</h4>
-                <p class="about-image__signature signature">Автор фото: Борис</p>
+              <div class="list-picture__about-long about-image about-image--background">
+                <div class="about-image__author-wrapper">
+                  <h4 class="about-image__title title title--left">Неродные просторы</h4>
+                  <p class="about-image__signature signature">Автор фото: Борис</p>
+                </div>
                 <div class="about-image__likes-wrapper">
                   <button class="about-image__button about-foto__button--icon" type="button">
                     <span class="visually-hidden">Лайки</span>
@@ -156,14 +161,16 @@
                 </div>
               </div>
             </li>
-            <li class="list-picture__item">
+            <li class="list-picture__item-short">
               <a class="list-picture__link" href="#">
                 <img class="list-picture__image" src="img/catalog/foto_cactus.jpg" width="400" height="267"
                   alt="Фотография кактуса в каньоне у города Седоны.">
               </a>
-              <div class="list-picture__about about-image">
-                <h4 class="about-image__title title title--left">Местная растительность</h4>
-                <p class="about-image__signature signature">Автор фото: Сергей</p>
+              <div class="list-picture__about-short about-image about-image--background">
+                <div class="about-image__author-wrapper">
+                  <h4 class="about-image__title title title--left">Местная растительность</h4>
+                  <p class="about-image__signature signature">Автор фото: Сергей</p>
+                </div>
                 <div class="about-image__likes-wrapper">
                   <button class="about-image__button about-image__button--icon" type="button">
                     <span class="visually-hidden">Лайки</span>
@@ -172,14 +179,16 @@
                 </div>
               </div>
             </li>
-            <li class="list-picture__item">
+            <li class="list-picture__item-short">
               <a class="list-picture__link" href="#">
                 <img class="list-picture__image" src="img/catalog/foto_forest.jpg" width="400" height="267"
                   alt="Фотография дороги через лес с высоты птичьего полета.">
               </a>
-              <div class="list-picture__about about-image">
-                <h4 class="about-image__title title title--left">Дорога на север</h4>
-                <p class="about-image__signature signature">Автор фото: Петр</p>
+              <div class="list-picture__about-short about-image about-image--background">
+                <div class="about-image__author-wrapper">
+                  <h4 class="about-image__title title title--left">Дорога на север</h4>
+                  <p class="about-image__signature signature">Автор фото: Петр</p>
+                </div>
                 <div class="about-image__likes-wrapper">
                   <button class="about-image__button about-image__button--icon" type="button">
                     <span class="visually-hidden">Лайки</span>
@@ -188,14 +197,16 @@
                 </div>
               </div>
             </li>
-            <li class="list-picture__item">
+            <li class="list-picture__item-short">
               <a class="list-picture__link" href="#">
-                <img class="list-picture__image" src="img/Sedona_devils_bridge.jpg" width="400" height="267"
+                <img class="list-picture__image" src="img/catalog/devils_bridge_catalog.jpeg" width="800" height="384"
                   alt="Фотография Моста Дьявола в каньоне города Седоны.">
               </a>
-              <div class="list-picture__about about-image">
-                <h4 class="about-image__title title title--left">Мост Дьявола</h4>
-                <p class="about-image__signature signature">Автор фото: Антон</p>
+              <div class="list-picture__about-short about-image about-image--background">
+                <div class="about-image__author-wrapper">
+                  <h4 class="about-image__title title title--left">Мост Дьявола</h4>
+                  <p class="about-image__signature signature">Автор фото: Антон</p>
+                </div>
                 <div class="about-image__likes-wrapper">
                   <button class="about-image__button about-image__button--icon" type="button">
                     <span class="visually-hidden">Лайки</span>
