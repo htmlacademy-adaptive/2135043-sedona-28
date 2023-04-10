@@ -1,7 +1,5 @@
 .list-picture {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  min-width: 280px;
   background-color: #ffffff;
   color: #333333;
   font-family: "PT Sans", sans-serif;
@@ -12,12 +10,98 @@
   list-style-type: none;
 }
 
-.list-picture__item {
+.list-picture__item-long {
   margin: 0 auto;
   padding: 24px 0 10px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 648px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 1200px;
+    padding: 0;
+  }
 }
 
-.list-picture__about {
+.list-picture__item-short {
+  margin: 0 auto;
+  padding: 24px 0 10px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 324px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
+    padding: 0;
+  }
+}
+
+.list-picture__about-long {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 15px 0;
+  padding: 15px 0 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 648px;
+    padding: 22px 20px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    padding: 22px 20px 15px 21px;
+  }
+}
+
+.list-picture__about-short {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px 0 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 324px;
+    padding: 22px 20px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 400px;
+    padding: 17px 20px 17px 25px;
+  }
 }

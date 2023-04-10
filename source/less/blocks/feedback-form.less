@@ -1,7 +1,4 @@
 .feedback-form {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
   min-width: 320px;
   background-color: #ffffff;
   color: #333333;
@@ -13,10 +10,108 @@
 }
 
 .feedback-form__field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 24px 0;
+  padding: 24px 0 34px;
+
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    padding: 0 0 48px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 493px;
+    padding: 0 0 56px 0;
+  }
+}
+
+.feedback-form__radio {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 24px 0 8px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+    width: 648px;
+    padding: 0 0 32px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 3;
+    width: 960px;
+    padding: 0 0 57px 0;
+  }
+}
+
+.feedback-form__checkbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 24px 0 8px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+    width: 648px;
+    padding: 0 0 26px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 3;
+    width: 960px;
+    padding: 0 0 71px 0;
+  }
+}
+
+.feedback-form__textarea {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 24px 0 56px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 3;
+    width: 960px;
+  }
+}
+
+.feedback-form__button-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 960px;
+  }
 }
 
 .feedback-form__button {
-  margin: 0 auto;
+  margin: 0 0 3px 0;
 }
+

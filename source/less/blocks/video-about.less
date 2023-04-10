@@ -9,13 +9,39 @@
 }
 
 .video-about__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    padding: 0 200px;
+  }
 }
 
 .video-about__information {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
   padding: 17px 0 38px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    padding: 58px 0 66px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    padding: 62px 0 64px;
+  }
 }
 
 .video-about__title {
@@ -24,6 +50,21 @@
 
 .video-about__description {
   margin: 0;
+}
+
+.video-about__link {
+  width: 280px;
+  height: 177px;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    height: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    height: 500px;
+  }
 }
 
 .video-about__poster {

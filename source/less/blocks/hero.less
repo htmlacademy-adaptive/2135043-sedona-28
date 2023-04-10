@@ -1,8 +1,33 @@
 .hero {
-  display: block;
   min-width: 320px;
+  min-height: 389px;
   background-color: #ffffff;
   color: #333333;
+}
+
+.hero__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  height: 389px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 768px;
+    height: 518px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 518px;
+  }
 }
 
 .hero__image {

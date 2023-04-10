@@ -1,7 +1,4 @@
 .about-image {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   background-color: #ffffff;
   color: #333333;
   font-family: "PT Sans", sans-serif;
@@ -10,12 +7,23 @@
   font-weight: 400;
 }
 
+.about-image__author-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .about-image__title {
   margin: 0;
 }
 
 .about-image__signature {
   margin: 0 0 11px 0;
+}
+
+.about-image__likes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about-image__button {
