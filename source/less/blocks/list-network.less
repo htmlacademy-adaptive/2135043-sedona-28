@@ -1,12 +1,42 @@
 .list-network {
   display: flex;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  color: #000000;
+  justify-content: space-between;
+  gap: 6px;
+  min-height: 48px;
+  background-color: inherit;
+  color: @white;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-align: center;
   list-style-type: none;
+}
+
+.list-network__item {
+  display: block;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.list-network__link {
+  width: 48px;
+  height: 48px;
+  padding: 17px 12px;
+  background-color: @blue;
+
+  &:hover {
+    background-color: @hover-color;
+  }
+
+  &:active {
+    background-color: @active-color;
+  }
+}
+
+.list-network__link .list-network__icon {
+  &:active {
+    opacity: 30%;
+  }
 }

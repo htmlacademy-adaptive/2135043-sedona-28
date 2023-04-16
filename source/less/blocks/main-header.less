@@ -1,11 +1,8 @@
 .main-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   min-width: 320px;
   min-height: 56px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: @white;
+  color: @black;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
@@ -13,14 +10,39 @@
 }
 
 .main-header__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
-}
-
-.main-header__toggle {
-  width: 68px;
-  height: 56px;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 768px;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
+.main-header__logo {
+  position: absolute;
+  content: "";
+  width: 185px;
+  height: 96px;
+  top: 0;
+  bottom: -40px;
+  right: 67px;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    left: 291px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 507px;
+  }
+}
+
+.main-header__navigation {
+  margin: 0 auto;
 }

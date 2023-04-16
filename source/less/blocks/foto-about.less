@@ -1,6 +1,6 @@
 .foto-about {
-  background-color: #ffffff;
-  color: #333333;
+  background-color: @white;
+  color: @brown;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -33,18 +33,33 @@
 }
 
 .foto-about__information {
+  position: relative;
   display: flex;
   flex-direction: column;
+  gap: 35px;
   flex-wrap: wrap;
   margin: 0;
   padding: 37px 0 25px;
+
+  @media (max-width: @mobile-width-only) {
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 1;
+      width: 320px;
+      height: 1px;
+      bottom: 0;
+      left: -20px;
+      background-color: #e5e5e5;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 648px;
-    padding: 66px 135px 67px;
+    padding: 66px 95px 67px;
   }
 
   @media (min-width: @desktop-width) {
@@ -52,17 +67,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 1200px;
-    padding: 100px 351px 67px;
+    padding: 100px 371px 65px;
   }
-}
-
-.foto-about__title {
-  margin: 0;
-  padding: 0 0 35px 0;
-}
-
-.foto-about__description {
-  margin: 0;
 }
 
 .foto-about__list {
@@ -80,9 +86,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
     grid-template-columns: repeat(3, 400px);
     width: 1200px;
-    padding: 0;
+  }
+}
+
+.foto-about__description {
+  @media (max-width: @mobile-width-only) {
+    br {
+      display: none;
+    }
   }
 }

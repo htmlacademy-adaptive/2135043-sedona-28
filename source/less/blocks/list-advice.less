@@ -1,7 +1,7 @@
 .list-advice {
   min-width: 320px;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: @white;
+  color: @brown;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -10,42 +10,119 @@
 }
 
 .list-advice__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-left: 47px;
+  gap: 16px;
+  padding: 7px 0 0 47px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
     width: 256px;
     padding: 158px 33px 60px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: column;
     width: 400px;
     padding: 169px 50px 69px;
   }
 }
 
+.list-advice__item--housing {
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon/icon_house.svg") no-repeat center center / contain;
+
+    @media (min-width: @tablet-width) {
+      width: 77px;
+      height: 72px;
+      top: 60px;
+      left: 89px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 79px;
+      height: 72px;
+      top: 69px;
+      left: 160px;
+    }
+  }
+}
+
+.list-advice__item--food {
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon/icon_burger.svg") no-repeat center center / contain;
+
+    @media (min-width: @tablet-width) {
+      width: 80px;
+      height: 68px;
+      top: 62px;
+      left: 87px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 73px;
+      height: 69px;
+      top: 72px;
+      left: 162px;
+    }
+  }
+}
+
+.list-advice__item--souvenirs {
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 40px;
+    height: 35px;
+    top: 0;
+    left: 0;
+    background: url("../img/icon/icon-gift.svg") no-repeat center center / contain;
+
+    @media (min-width: @tablet-width) {
+      width: 67px;
+      height: 75px;
+      top: 64px;
+      left: 98px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 78px;
+      height: 75px;
+      top: 69px;
+      left: 160px;
+    }
+  }
+}
+
 .list-advice__title {
-  margin: 6px 0 16px;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     text-align: center;
-    margin: 0 0 16px 0;
   }
 
   @media (min-width: @desktop-width) {
     text-align: center;
-    margin: 0 0 16px 0;
   }
 }
 
 .list-advice__description {
-  margin: 0 0 25px 0;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     text-align: center;
@@ -55,5 +132,11 @@
   @media (min-width: @desktop-width) {
     text-align: center;
     margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
   }
 }
