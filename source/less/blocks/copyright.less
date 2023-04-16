@@ -1,19 +1,44 @@
 .copyright {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: @white;
+  color: @black;
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
+  padding: 0 14px;
+}
+
+.copyright__link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  min-height: 35px;
+  align-items: center;
+
+  &:hover {
+    color: @blue;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
+}
+
+.copyright__link .copyright__title {
+  &:hover {
+    color: @blue;
+  }
+
+  &:active {
+    color: #b3b3b3;
+  }
 }
 
 .copyright__title {
-  font-family: "PT Sans", sans-serif;
   font-size: 14px;
-  line-height: 21px;
   font-weight: 400;
+  color: @black;
+  margin-block: 0;
 }

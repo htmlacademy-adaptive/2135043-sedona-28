@@ -1,17 +1,29 @@
 .hero {
   min-width: 320px;
   min-height: 389px;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: @white;
+  color: @brown;
 }
 
 .hero__wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 320px;
   height: 389px;
   margin: 0 auto;
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 320px;
+    height: 57px;
+    bottom: 0;
+    left: 0;
+    background: url("../img/vector_sedona_mountains.svg") no-repeat center center / cover;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -22,14 +34,47 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 1200px;
-    height: 518px;
   }
 }
 
 .hero__image {
   margin: 0 auto;
 }
+
+.hero--welcome {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    width: 282px;
+    height: 214px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: url("../img/title_welcome.svg") no-repeat center center / contain;
+  }
+}
+
+.hero--title {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: 229px;
+    height: 39px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: url("../img/text_sedona.svg") no-repeat center center / contain;
+  }
+}
+

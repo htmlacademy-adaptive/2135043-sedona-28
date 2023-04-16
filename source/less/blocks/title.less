@@ -1,5 +1,5 @@
 .title {
-  color: #000000;
+  color: @black;
   background-color: inherit;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -7,6 +7,12 @@
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  margin-block: 0;
+  padding-inline: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .title--left {
@@ -14,5 +20,21 @@
 }
 
 .title--color-light {
-  color: #ffffff;
+  color: @white;
+}
+
+.title--big {
+  font-size: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.title--size-short {
+  @media (min-width: @desktop-width) {
+    width: min-content;
+    margin: 0 auto;
+  }
 }
