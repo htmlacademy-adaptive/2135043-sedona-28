@@ -1,10 +1,6 @@
 .description {
-  color: @black;
+  color: @brown;
   background-color: inherit;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   margin-block: 0;
@@ -19,11 +15,6 @@
   color: @white;
 }
 
-.description--big {
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .description--size-short {
   @media (min-width: @desktop-width) {
     margin: 0 10px;
@@ -33,6 +24,16 @@
 .description--size-canyon {
   @media (max-width: @mobile-width-only) {
     margin: 0 15px;
+  }
+}
+
+.description--normal {
+  font-weight: 400;
+}
+
+.description--retreat {
+  @media (min-width: @desktop-width) {
+    margin: 0 35px;
   }
 }
 

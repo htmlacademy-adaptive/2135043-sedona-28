@@ -2,10 +2,8 @@
   position: relative;
   background-color: @white;
   color: @black;
-  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
-  font-weight: 700;
   border: none;
 }
 
@@ -62,8 +60,8 @@
   position: absolute;
   content: "";
   z-index: 1;
-  width: 58px;
-  height: 58px;
+  width: 57px;
+  height: 57px;
   bottom: 0;
   right: 0;
   background-color: @gray;
@@ -113,6 +111,7 @@
   padding-inline: 0;
   align-items: start;
   gap: 16px;
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -180,6 +179,10 @@
   &:active {
     background-color: #d5d5d5;
   }
+}
+
+.fieldset-feedback__control-input:focus-visible + .fieldset-feedback__control-mark {
+  outline: 2px solid @black;
 }
 
 .fieldset-feedback__control-input[type="radio"]:checked:active + .fieldset-feedback__control-mark--radio {

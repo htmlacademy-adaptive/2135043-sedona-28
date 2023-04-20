@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__logo logo-sedona">
-        <svg class="logo-sedona_icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <a class="main-header__logo" href="index.html">
+        <svg class="main-header__logo-icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M185 0H0L79.8097 90.1011C86.8489 97.9663 98.2503 97.9663 105.289 90.1011L185 0Z" fill="#81B3D3" />
           <path d="M42.8296 0.696915L92.0043 58.8395L140.882 1.09515L42.8296 0.696915Z" fill="#23A9E1" />
           <path
@@ -125,11 +129,21 @@
   <main class="main-index">
     <div class="main-index__wrapper">
       <h1 class="visually-hidden"> Добро пожаловать в Седону</h1>
-      <section class="hero hero--welcome">
-        <div class="hero__wrapper">
+      <section class="hero">
+        <div class="hero__wrapper hero__wrapper--vector">
           <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
-          <img class="hero__image hero__image--vector" src="img/Sedona_mountains.jpg" width="1200" height="518"
-            alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="img/hero/mountains_big_tablet_desktop.jpg 1x, img/hero/mountains_big_tablet_desktop@2x.jpg 2x">
+            <img class="hero__image-index-mountains" src="img/hero/mountains_index_mobile.jpg"
+              srcset="img/hero/mountains_index_mobile@2x.jpg 2x" width="901" height="389"
+              alt="Горы Седоны с высоты птичьего полета.">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/hero/title_welcome_big.svg">
+            <img class="hero__image-index" src="img/hero/title_welcome_small.svg" width="282" height="214"
+              alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+          </picture>
         </div>
       </section>
       <section class="advantages">
@@ -149,8 +163,14 @@
               </p>
               </div>
               <div class="advantages__picture-wrapper">
-                <img class="advantages__picture" src="img/Sedona_street.jpg" width="800" height="256"
-                  alt="Улица города Седона.">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="img/advantages/sedona_street_desktop.jpg 1x, img/advantages/sedona_street_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="img/advantages/sedona_street_tablet.jpg 1x, img/advantages/sedona_street_tablet@2x.jpg 2x">
+                  <img class="advantages__picture" src="img/advantages/sedona_street_mobile.jpg" srcset="img/advantages/sedona_street_mobile@2x.jpg 2x" width="520" height="260"
+                    alt="Улица города Седона.">
+                </picture>
               </div>
               <ul class="advantages__list-advice list-advice">
                 <li class="list-advice__item list-advice__item--housing">
@@ -174,11 +194,19 @@
               <div class="advantages__wrapper-image-bridge advantages__wrapper-image-bridge--color">
                 <h3 class="advantages__title title title--color-light">Там есть<br> мост Дьявола</h3>
                 <span class="advantages__number">- №2 -</span>
-                <p class="advantages__description description description--color-light">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+                <p class="advantages__description description description--color-light description--retreat">Да, по нему можно пройти!
+                  Если вы осмелитесь, конечно</p>
               </div>
               <div class="advantages__picture-wrapper">
-                <img class="advantages__picture" src="img/Sedona_devils_bridge.jpg" width="800" height="256"
+                <picture>
+                  <source media="(min-width: 1200px)"
+                  srcset="img/advantages/devils_bridge_desktop.jpg 1x, img/advantages/devils_bridge_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="img/advantages/devils_bridge_tablet.jpg 1x, img/advantages/devils_bridge_tablet@2x.jpg 2x">
+                  <img class="advantages__picture" src="img/advantages/devils_bridge_mobile.jpg"
+                  srcset="img/advantages/devils_bridge_mobile@2x.jpg 2x" width="520" height="260"
                   alt="Мост Дьявола в каньоне города Седона.">
+                </picture>
               </div>
             </li>
             <li class="advantages__item-square advantages__item--base-color">
@@ -207,9 +235,12 @@
               предложения гостиниц в Седоне</p>
             <a class="search-hotels__button button" href="#">Найти Гостиницу</a>
           </div>
-          <a class="search-hotels__link" href="#">
-            <img class="search-hotels__picture" src="img/sedona_map.jpg" width="1200" height="350"
-              alt="Карта для поиска гостиниц в Седоне.">
+          <a class="search-hotels__link" href="https://goo.gl/maps/v9SCnkg5omrAXFCs5">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/map/map_desktop.jpg 1x, img/map/map_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map/map_tablet.jpg 1x, img/map/map_tablet@2x.jpg 2x">
+              <img class="search-hotels__picture" src="img/map/map_mobile.jpg" srcset="img/map/map_mobile@2x.jpg" width="320" height="350" alt="Карта для поиска гостиниц в Седоне.">
+            </picture>
           </a>
         </div>
       </section>

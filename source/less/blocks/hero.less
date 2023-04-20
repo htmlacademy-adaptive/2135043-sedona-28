@@ -1,80 +1,146 @@
 .hero {
+  position: relative;
   min-width: 320px;
-  min-height: 389px;
-  background-color: @white;
+  background-color: @blue;
   color: @brown;
 }
 
 .hero__wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 320px;
-  height: 389px;
+  min-height: 158px;
   margin: 0 auto;
-
-  &::after {
-    position: absolute;
-    content: "";
-    z-index: 1;
-    width: 320px;
-    height: 57px;
-    bottom: 0;
-    left: 0;
-    background: url("../img/vector_sedona_mountains.svg") no-repeat center center / cover;
-  }
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 768px;
-    height: 518px;
+    min-height: 290px;
+    background-position: center;
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
+    min-height: 301px;
   }
 }
 
-.hero__image {
-  margin: 0 auto;
+.hero__image-index-mountains {
+  width: 901px;
+  height: 389px;
+
+  @media (min-width: @tablet-width) {
+    width: 1200px;
+    height: 518px;
+    object-fit: cover;
+  }
 }
 
-.hero--welcome {
-  position: relative;
+.hero__image-index {
+  position: absolute;
+  content: "";
+  width: 282px;
+  height: 214px;
+  top: 90px;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
 
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+    top: 77px;
+    bottom: 91px;
+  }
+}
+
+.hero__image-catalog {
+  position: absolute;
+  content: "";
+  width: 229px;
+  height: 39px;
+  top: 52px;
+  bottom: 67px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: @tablet-width) {
+    width: 457px;
+    height: 78px;
+    top: 95px;
+    bottom: 117px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+    height: 80px;
+    top: 102px;
+    bottom: 120px;
+  }
+}
+
+.hero__wrapper--small {
+  min-width: 320px;
+  height: 158px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    height: 301px;
+  }
+}
+
+.hero__image-catalog-mountains {
+  width: 902px;
+  height: 214px;
+  position: relative;
+  top: -56px;
+  margin-bottom: -56px;
+
+  object-fit: cover;
+
+  @media (min-width: @tablet-width) {
+    width: 1200px;
+    height: 518px;
+    top: -228px;
+    margin-bottom: -228px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -217px;
+    margin-bottom: -217px;
+  }
+}
+
+.hero__wrapper--vector {
   &::after {
     position: absolute;
     content: "";
     z-index: 1;
-    width: 282px;
-    height: 214px;
-    top: 0;
+    width: 100%;
+    height: 37px;
     bottom: 0;
-    right: 0;
     left: 0;
-    margin: auto;
-    background: url("../img/title_welcome.svg") no-repeat center center / contain;
+    background: url("../img/hero/vector_small.svg") no-repeat center bottom / cover;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: 2;
+      width: 100%;
+      height: 57px;
+      bottom: 0;
+      left: 0;
+      background: url("../img/hero/vector_big.svg") no-repeat center bottom / cover;
+    }
   }
 }
-
-.hero--title {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: "";
-    z-index: 2;
-    width: 229px;
-    height: 39px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    background: url("../img/text_sedona.svg") no-repeat center center / contain;
-  }
-}
-

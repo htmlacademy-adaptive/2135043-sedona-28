@@ -1,10 +1,6 @@
 .video-about {
   background-color: @white;
   color: @brown;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -49,14 +45,11 @@
   margin: 0;
 }
 
-.video-about__description {
-  margin: 0;
-}
-
 .video-about__link {
   position: relative;
   width: 280px;
   height: 177px;
+  background-color: @white;
 
   &::after {
     position: absolute;
@@ -80,10 +73,25 @@
   @media (min-width: @desktop-width) {
     width: 800px;
     height: 500px;
-    padding: 0 79px;
+  }
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
   }
 }
 
 .video-about__poster {
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    min-width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 800px;
+  }
 }
