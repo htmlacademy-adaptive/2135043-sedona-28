@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__logo logo-sedona">
-        <svg class="logo-sedona_icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96"
+      <a class="main-header__logo" href="index.html">
+        <svg class="main-header__logo-icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96"
           fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M185 0H0L79.8097 90.1011C86.8489 97.9663 98.2503 97.9663 105.289 90.1011L185 0Z" fill="#81B3D3" />
           <path d="M42.8296 0.696915L92.0043 58.8395L140.882 1.09515L42.8296 0.696915Z" fill="#23A9E1" />
@@ -108,12 +112,12 @@
             <li class="main-navigation__item">
               <a class="main-navigation__link link" href="index.html">Главная</a>
             </li>
-            <li class="main-navigation__item main-navigation__item--current">
+            <li class="main-navigation__item">
               <a class="main-navigation__link link" href="catalog.html">Фото и видео</a>
             </li>
           </ul>
           <ul class="main-navigation__user">
-            <li class="main-navigation__user-item">
+            <li class="main-navigation__user-item  main-navigation__item--current">
               <a class="main-navigation__user-link link" href="form.html">Форма отзыва</a>
             </li>
             <li class="main-navigation__user-item">
@@ -127,18 +131,28 @@
   <main class="main-feedback">
     <div class="main-feedback__wrapper">
       <h1 class="visually-hidden"> Добро пожаловать на страницу отзывов и обратной связи</h1>
-      <section class="hero hero--vector hero--title">
-        <div class="hero__wrapper">
+      <section class="hero">
+        <div class="hero__wrapper hero__wrapper-small hero__wrapper--vector">
           <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
-          <img class="hero__image hero__image--vector" src="img/Sedona_mountains.jpg" width="1200" height="518"
-            alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="img/hero/mountains_big_tablet_desktop.jpg 1x, img/hero/mountains_big_tablet_desktop@2x.jpg 2x">
+            <img class="hero__image-catalog-mountains" src="img/hero/mountains_catalog_mobile.jpg"
+              srcset="img/hero/mountains_catalog_mobile@2x.jpg 2x" width="902" height="214"
+              alt="Горы Седоны с высоты птичьего полета.">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/hero/sedona_big.svg">
+            <img class="hero__image-catalog" src="img/hero/sedona_small.svg" width="229" height="39"
+              alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+          </picture>
         </div>
       </section>
       <section class="feedback">
         <div class="feedback__wrapper">
           <header class="feedback__header">
             <h2 class="feedback__header-title title">Оставьте свой отзыв</h2>
-            <p class="feedback__header-description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а
+            <p class="feedback__header-description description description--normal">Помогите нашим отелям стать лучше! оставьте отзыв о них, а
               также о посещенных вами достопримечательностях</p>
           </header>
           <form class="feedback__about feedback-form" action="https://echo.htmlacademy.ru/" method="get">
@@ -233,7 +247,7 @@
               </ul>
             </fieldset>
             <fieldset class="feedback-form__textarea fieldset-feedback">
-              <h3 class="fieldset-feedback__title title" for="emotions">Опишите свои эмоции:</h3>
+              <label class="fieldset-feedback__title title" for="emotions">Опишите свои эмоции:</label>
               <textarea class="fieldset-feedback__textarea field" id="emotions" name="emotions"
                 placeholder="Опишите подробно все свои восторги" required></textarea>
             </fieldset>

@@ -1,7 +1,6 @@
 .title {
   color: @black;
   background-color: inherit;
-  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -28,7 +27,11 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 26px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 30px;
   }
 }
 

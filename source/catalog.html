@@ -6,13 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper">
-      <a class="main-header__logo logo-sedona">
-        <svg class="logo-sedona_icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96"
+      <a class="main-header__logo" href="index.html">
+        <svg class="main-header__logo-icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96"
           fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M185 0H0L79.8097 90.1011C86.8489 97.9663 98.2503 97.9663 105.289 90.1011L185 0Z" fill="#81B3D3" />
           <path d="M42.8296 0.696915L92.0043 58.8395L140.882 1.09515L42.8296 0.696915Z" fill="#23A9E1" />
@@ -127,11 +131,21 @@
   <main class="main-inner">
     <div class="main-inner__wrapper">
       <h1 class="visually-hidden">Достопримечательности города Седоны</h1>
-      <section class="hero hero--title">
-        <div class="hero__wrapper">
+      <section class="hero">
+        <div class="hero__wrapper hero__wrapper--small hero__wrapper--vector">
           <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
-          <img class="hero__image hero__image--vector" src="img/Sedona_mountains.jpg" width="1200" height="518"
-          alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+          <picture>
+          <source media="(min-width: 768px)"
+            srcset="img/hero/mountains_big_tablet_desktop.jpg 1x, img/hero/mountains_big_tablet_desktop@2x.jpg 2x">
+            <img class="hero__image-catalog-mountains" src="img/hero/mountains_catalog_mobile.jpg"
+            srcset="img/hero/mountains_catalog_mobile@2x.jpg 2x" width="902" height="214"
+            alt="Горы Седоны с высоты птичьего полета.">
+          </picture>
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/hero/sedona_big.svg">
+            <img class="hero__image-catalog" src="img/hero/sedona_small.svg" width="229" height="39"
+              alt="Welcome to the gorgeous Sedona because the Grand Canyon sucks!">
+          </picture>
         </div>
       </section>
       <section class="foto-about">
@@ -145,13 +159,20 @@
           <ul class="foto-about__list list-picture">
             <li class="list-picture__item-long">
               <a class="list-picture__link" href="#">
-                <img class="list-picture__image" src="img/catalog/foto_sunset.jpg" width="1200" height="400"
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/foto_sunset_desktop.jpg 1x,
+                  img/catalog/foto_sunset_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/foto_sunset_tablet.jpg 1x,
+                  img/catalog/foto_sunset_tablet@2x.jpg 2x">
+                  <img class="list-picture__image list-picture__image--long" src="img/catalog/foto_sunset_mobile.jpg"
+                  srcset="img/catalog/foto_sunset_mobile@2x.jpg"   width="280" height="280"
                   alt="Фотография дороги в седону на фоне заката.">
+                </picture>
               </a>
               <div class="list-picture__about-long about-image about-image--color">
                 <div class="about-image__author-wrapper">
                   <h4 class="about-image__name about-image__name--big">Неродные просторы</h4>
-                  <p class="about-image__signature signature signature--base-color">Автор фото: Борис</p>
+                  <p class="about-image__signature signature signature--color">Автор фото: Борис</p>
                 </div>
                 <div class="about-image__likes-wrapper">
                   <button class="about-image__button about-image__button--color-light" type="button">
@@ -168,8 +189,15 @@
             </li>
             <li class="list-picture__item-short">
               <a class="list-picture__link" href="#">
-                <img class="list-picture__image" src="img/catalog/foto_cactus.jpg" width="400" height="267"
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/foto_cactus_desktop.jpg 1x,
+                  img/catalog/foto_cactus_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/foto_cactus_tablet.jpg 1x,
+                  img/catalog/foto_cactus_tablet@2x.jpg 2x">
+                  <img class="list-picture__image" src="img/catalog/foto_cactus_mobile.jpg"
+                  srcset="img/catalog/foto_cactus_mobile@2x.jpg"   width="280" height="280"
                   alt="Фотография кактуса в каньоне у города Седоны.">
+                </picture>
               </a>
               <div class="list-picture__about-short about-image about-image--color">
                 <div class="about-image__author-wrapper">
@@ -192,8 +220,13 @@
             </li>
             <li class="list-picture__item-short">
               <a class="list-picture__link" href="#">
-                <img class="list-picture__image" src="img/catalog/foto_forest.jpg" width="400" height="267"
-                  alt="Фотография дороги через лес с высоты птичьего полета.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/foto_forest_desktop.jpg 1x,
+                  img/catalog/foto_forest_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/foto_forest_tablet.jpg 1x,
+                  img/catalog/foto_forest_tablet@2x.jpg 2x">
+                  <img class="list-picture__image" src="img/catalog/foto_forest_mobile.jpg" srcset="img/catalog/foto_forest_mobile@2x.jpg" width="280" height="280" alt="Фотография дороги через лес с высоты птичьего полета.">
+                </picture>
               </a>
               <div class="list-picture__about-short about-image about-image--color">
                 <div class="about-image__author-wrapper">
@@ -216,8 +249,13 @@
             </li>
             <li class="list-picture__item-short">
               <a class="list-picture__link" href="#">
-                <img class="list-picture__image" src="img/catalog/devils_bridge_catalog.jpeg" width="800" height="384"
-                  alt="Фотография Моста Дьявола в каньоне города Седоны.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/catalog/foto_bridge_desktop.jpg 1x,
+                  img/catalog/foto_bridge_desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/foto_bridge_tablet.jpg 1x,
+                  img/catalog/foto_bridge_tablet@2x.jpg 2x">
+                  <img class="list-picture__image" src="img/catalog/foto_bridge_mobile.jpg" srcset="img/catalog/foto_bridge_mobile@2x.jpg" width="280" height="280" alt="Фотография Моста Дьявола в каньоне города Седоны.">
+                </picture>
               </a>
               <div class="list-picture__about-short about-image about-image--color">
                 <div class="about-image__author-wrapper">
@@ -246,12 +284,15 @@
           <h2 class="visually-hidden">Посмотрите видео о городке Седона</h2>
           <div class="video-about__information">
             <h3 class="video-about__title title title--big">Все еще сомневаетесь?</h3>
-            <p class="video-about__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
+            <p class="video-about__description description description--retreat">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
             очередной раз!</p>
           </div>
           <a class="video-about__link video-about__link--button" href="#">
-            <img class="video-about__poster" src="img/catalog/foto-video.jpg" width="800" height="500"
-            alt="Видеопрезентация красот города Седоны.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/catalog/foto_video_desktop.jpg 1x, img/catalog/foto_video_desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/catalog/foto_video_tablet.jpg 1x, img/catalog/foto_video_tablet@2x.jpg 2x">
+              <img class="video-about__poster" src="img/catalog/foto_video_mobile.jpg" srcset="img/catalog/foto_video_mobile@2x.jpg"        width="280" height="177" alt="Видеопрезентация красот города Седоны.">
+            </picture>
           </a>
         </div>
       </section>

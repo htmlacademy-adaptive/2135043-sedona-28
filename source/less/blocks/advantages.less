@@ -3,10 +3,6 @@
   min-width: 320px;
   background-color: @white;
   color: @brown;
-  font-family: "PT Sans", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 400;
   text-align: center;
 }
 
@@ -221,6 +217,7 @@
   align-items: center;
   width: 320px;
   height: 260px;
+  background-color: @gray;
 
   @media (min-width: @tablet-width) {
     width: 512px;
@@ -235,6 +232,15 @@
 
 .advantages__picture {
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 512px;
+    height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .advantages__item-square {
