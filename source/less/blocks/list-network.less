@@ -17,6 +17,7 @@
 }
 
 .list-network__link {
+  position: relative;
   width: 48px;
   height: 48px;
   padding: 17px 12px;
@@ -35,4 +36,13 @@
   &:active {
     opacity: 30%;
   }
+}
+
+.list-network__icon {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
 }
