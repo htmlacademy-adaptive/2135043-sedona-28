@@ -68,14 +68,13 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 323px);
     width: 648px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 480px);
     width: 960px;
+    grid-template-columns: repeat(2, 50%);
   }
 }
