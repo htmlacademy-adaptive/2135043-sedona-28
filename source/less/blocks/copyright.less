@@ -1,6 +1,5 @@
 .copyright {
   background-color: @white;
-  color: @black;
   text-align: center;
   text-transform: uppercase;
   padding: 0 14px;
@@ -12,6 +11,8 @@
   gap: 13px;
   min-height: 35px;
   align-items: center;
+  font-size: 14px;
+  font-weight: 400;
 
   &:hover {
     color: @blue;
@@ -22,7 +23,7 @@
   }
 }
 
-.copyright__link .copyright__title {
+.copyright__link + .copyright__title {
   &:hover {
     color: @blue;
   }
