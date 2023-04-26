@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   min-width: 320px;
-  background-color: @blue;
+  background-color: @white;
   color: @brown;
 }
 
@@ -30,7 +30,7 @@
 
 .hero__image-index-mountains {
   width: 901px;
-  height: 389px;
+  height: 388px;
 
   @media (min-width: @tablet-width) {
     width: 1200px;
@@ -99,7 +99,7 @@
 
 .hero__image-catalog-mountains {
   width: 902px;
-  height: 214px;
+  height: 213px;
   position: relative;
   top: -56px;
   margin-bottom: -56px;
@@ -108,7 +108,7 @@
 
   @media (min-width: @tablet-width) {
     width: 1200px;
-    height: 518px;
+    height: 516px;
     top: -228px;
     margin-bottom: -228px;
   }
@@ -123,24 +123,23 @@
   &::after {
     position: absolute;
     content: "";
-    z-index: 1;
-    width: 100%;
-    height: 37px;
+    z-index: 2;
+    width: 1200px;
+    height: 57px;
     bottom: 0;
-    left: 0;
-    background: url("../img/hero/vector_small.svg") no-repeat center bottom / cover;
+    left: -440px;
+    background: url("../img/hero/hero_vector.svg") no-repeat center bottom / cover;
   }
 
   @media (min-width: @tablet-width) {
     &::after {
-      position: absolute;
-      content: "";
-      z-index: 2;
-      width: 100%;
-      height: 57px;
-      bottom: 0;
+      left: -216px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::after {
       left: 0;
-      background: url("../img/hero/vector_big.svg") no-repeat center bottom / cover;
     }
   }
 }

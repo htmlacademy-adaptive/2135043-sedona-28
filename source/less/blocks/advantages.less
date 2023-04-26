@@ -84,15 +84,27 @@
   padding: 70px 18px 40px;
 
   @media (max-width: @mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: 1;
+      width: 161px;
+      height: 37px;
+      top: -1px;
+      left: 0;
+      background: url("../img/advantages/Vector_white.svg") no-repeat left top / cover;
+      transform: scaleX(-1);
+    }
+
     &::after {
       position: absolute;
       content: "";
       z-index: 1;
-      width: 100%;
+      width: 161px;
       height: 37px;
-      top: 0;
-      left: 0;
-      background: url("../img/vector_small_white.svg") no-repeat center top / cover;
+      top: -1px;
+      right: 0;
+      background: url("../img/advantages/Vector_white.svg") no-repeat right top / cover;
     }
   }
 
