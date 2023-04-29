@@ -79,7 +79,7 @@
     right: 0;
     left: 0;
     margin: auto;
-    background: url("../img/icon/icon_phone.svg") no-repeat center center / contain;
+    mask-image: url("../img/sprite.svg#phone-picture") no-repeat center center / contain;
   }
 }
 
@@ -95,7 +95,7 @@
     right: 0;
     left: 0;
     margin: auto;
-    background: url("../img/icon/icon_mail.svg") no-repeat center center / contain;
+    mask-image: url("../img/sprite.svg#mail-picture") no-repeat center center / contain;
   }
 }
 
@@ -127,6 +127,14 @@
     justify-content: space-between;
     width: 960px;
     margin: 17px 0 0 0;
+    padding: 0 53px;
+  }
+}
+
+.fieldset-feedback__list--bottom {
+  @media (min-width: @desktop-width) {
+    margin: 31px 0 0 0;
+    padding: 0 45px;
   }
 }
 
@@ -220,11 +228,12 @@
 
 .fieldset-feedback__textarea {
   width: 280px;
-  height: 150px;
+  min-height: 150px;
   padding: 16px;
 
   @media (min-width: @tablet-width) {
     width: 648px;
+    min-height: 160px;
   }
 
   @media (min-width: @desktop-width) {

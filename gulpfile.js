@@ -28,6 +28,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    browser: 'chrome'
   });
   done();
 }
@@ -43,3 +44,4 @@ const watcher = () => {
 export default gulp.series(
   styles, server, watcher
 );
+
