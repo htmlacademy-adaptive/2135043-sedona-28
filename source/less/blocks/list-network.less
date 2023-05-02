@@ -17,10 +17,9 @@
 }
 
 .list-network__link {
-  position: relative;
   width: 48px;
   height: 48px;
-  padding: 17px 12px;
+  padding: 12px;
   background-color: @blue;
 
   &:hover {
@@ -38,11 +37,20 @@
   }
 }
 
+.list-network__icon-wrapper {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+}
+
 .list-network__icon {
   position: absolute;
   content: "";
-  width: 24px;
-  height: 24px;
-  top: 12px;
-  left: 12px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }

@@ -79,7 +79,8 @@
     right: 0;
     left: 0;
     margin: auto;
-    background: url("../img/icon/icon_phone.svg") no-repeat center center / contain;
+    mask: url("../img/sprite.svg#icon-phone") no-repeat center center / contain;
+    background-color: @black;
   }
 }
 
@@ -95,7 +96,8 @@
     right: 0;
     left: 0;
     margin: auto;
-    background: url("../img/icon/icon_mail.svg") no-repeat center center / contain;
+    mask: url("../img/sprite.svg#icon-mail") no-repeat center center / contain;
+    background-color: @black;
   }
 }
 
@@ -127,6 +129,19 @@
     justify-content: space-between;
     width: 960px;
     margin: 17px 0 0 0;
+    padding: 0 53px;
+  }
+}
+
+.fieldset-feedback__list--bottom {
+  @media (min-width: @tablet-width) {
+    padding: 0 84px;
+    gap: 16px 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 31px 0 0 0;
+    padding: 0 45px;
   }
 }
 
@@ -174,6 +189,7 @@
 .fieldset-feedback__control-input + .fieldset-feedback__control-mark {
   &:hover {
     background-color: #e5e5e5;
+    cursor: pointer;
   }
 
   &:active {
@@ -202,7 +218,8 @@
     left: 0;
     right: 0;
     margin: auto;
-    background: url("../img/icon/icon_checkbox.svg") no-repeat center center / cover;
+    mask: url("../img/icon/icon-checkbox.svg") no-repeat center center / cover;
+    background-color: @black;
   }
 }
 
@@ -219,11 +236,12 @@
 
 .fieldset-feedback__textarea {
   width: 280px;
-  height: 150px;
+  min-height: 150px;
   padding: 16px;
 
   @media (min-width: @tablet-width) {
     width: 648px;
+    min-height: 160px;
   }
 
   @media (min-width: @desktop-width) {
