@@ -79,7 +79,8 @@
     right: 0;
     left: 0;
     margin: auto;
-    mask-image: url("../img/sprite.svg#phone-picture") no-repeat center center / contain;
+    mask: url("../img/sprite.svg#icon-phone") no-repeat center center / contain;
+    background-color: @black;
   }
 }
 
@@ -95,7 +96,8 @@
     right: 0;
     left: 0;
     margin: auto;
-    mask-image: url("../img/sprite.svg#mail-picture") no-repeat center center / contain;
+    mask: url("../img/sprite.svg#icon-mail") no-repeat center center / contain;
+    background-color: @black;
   }
 }
 
@@ -132,6 +134,11 @@
 }
 
 .fieldset-feedback__list--bottom {
+  @media (min-width: @tablet-width) {
+    padding: 0 84px;
+    gap: 16px 32px;
+  }
+
   @media (min-width: @desktop-width) {
     margin: 31px 0 0 0;
     padding: 0 45px;
@@ -211,7 +218,8 @@
     left: 0;
     right: 0;
     margin: auto;
-    background: url("../img/icon/icon_checkbox.svg") no-repeat center center / cover;
+    mask: url("../img/icon/icon-checkbox.svg") no-repeat center center / cover;
+    background-color: @black;
   }
 }
 

@@ -87,7 +87,7 @@
 
   @media (min-width: @tablet-width) {
     width: 256px;
-    padding: 52px 33px 31px;
+    padding: 52px 33px 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -131,7 +131,7 @@
     }
   }
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     margin-top: 10px;
   }
 }
@@ -215,8 +215,57 @@
 }
 
 .advantages__number {
+  position: relative;
   display: block;
   margin: 0 0 6px 0;
+}
+
+.advantages__number--vector-white {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 1px;
+    top: 50%;
+    transform: translateX(-50%);
+    left: 130px;
+    background-color: @white;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 1px;
+    top: 50%;
+    transform: translateX(-50%);
+    right: 123px;
+    background-color: @white;
+  }
+}
+
+.advantages__number--vector-black {
+  &::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 1px;
+    top: 50%;
+    transform: translateX(-50%);
+    left: 130px;
+    background-color: @black;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 1px;
+    top: 50%;
+    transform: translateX(-50%);
+    right: 123px;
+    background-color: @black;
+  }
 }
 
 .advantages__picture-wrapper {

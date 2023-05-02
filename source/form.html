@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
-  <link rel="icon" href="img/favicons/favicon-32x32.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="icon" href="favicons/favicon-32x32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
@@ -17,28 +17,34 @@
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="index.html" aria-label="Сайт Города Седона - главная страница">
         <svg class="main-header__logo-icon" width="185" height="96">
-          <use xlink:href="img/sprite.svg#logotipe-sedona"></use>
+          <use xlink:href="img/sprite.svg#logotipe-sedona">
+          </use>
         </svg>
       </a>
       <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Открыть меню
+          </span>
         </button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
-              <a class="main-navigation__link link" href="index.html">Главная</a>
+              <a class="main-navigation__link link" href="index.html">Главная
+              </a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link link" href="catalog.html">Фото и видео</a>
+              <a class="main-navigation__link link" href="catalog.html">Фото и видео
+              </a>
             </li>
           </ul>
           <ul class="main-navigation__user">
-            <li class="main-navigation__user-item  main-navigation__item--current">
-              <a class="main-navigation__user-link link" href="#">Форма отзыва</a>
+            <li class="main-navigation__user-item main-navigation__item--current">
+              <a class="main-navigation__user-link link" href="#">Форма отзыва
+              </a>
             </li>
             <li class="main-navigation__user-item">
-              <a class="main-navigation__user-link link" href="https://htmlacademy.ru/">HTML Academy</a>
+              <a class="main-navigation__user-link link" href="https://htmlacademy.ru/">HTML Academy
+              </a>
             </li>
           </ul>
         </div>
@@ -47,13 +53,15 @@
   </header>
   <main class="main-feedback">
     <div class="main-feedback__wrapper">
-      <h1 class="visually-hidden"> Добро пожаловать на страницу отзывов и обратной связи</h1>
+      <h1 class="visually-hidden">Добро пожаловать на страницу отзывов и обратной связи
+      </h1>
       <section class="hero">
         <div class="hero__wrapper hero__wrapper-small hero__wrapper--vector">
-          <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
+          <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета
+          </h2>
           <picture>
             <source media="(min-width: 768px)"
-              srcset="img/hero/mountains_big_tablet_desktop.jpg 1x, img/hero/mountains_big_tablet_desktop@2x.jpg 2x">
+              srcset="img/hero/mountains_big_tablet_desktop.jpg, img/hero/mountains_big_tablet_desktop@2x.jpg 2x">
             <img class="hero__image-catalog-mountains" src="img/hero/mountains_catalog_mobile.jpg"
               srcset="img/hero/mountains_catalog_mobile@2x.jpg 2x" width="902" height="214"
               alt="Горы Седоны с высоты птичьего полета.">
@@ -68,109 +76,154 @@
       <section class="feedback">
         <div class="feedback__wrapper">
           <header class="feedback__header">
-            <h2 class="feedback__header-title title">Оставьте свой отзыв</h2>
-            <p class="feedback__header-description description description--normal">Помогите нашим отелям стать лучше! оставьте отзыв о них, а
-              также о посещенных вами достопримечательностях</p>
+            <h2 class="feedback__header-title title">Оставьте свой отзыв
+            </h2>
+            <p class="feedback__header-description description description--normal">Помогите нашим отелям стать лучше!
+              оставьте отзыв о них, а также о посещенных вами достопримечательностях
+            </p>
           </header>
           <form class="feedback__about feedback-form" action="https://echo.htmlacademy.ru/" method="get">
             <fieldset class="feedback-form__field fieldset-feedback fieldset-feedback--left">
-              <h3 class="fieldset-feedback__title title">Представьтесь:</h3>
+              <h3 class="fieldset-feedback__title title">Представьтесь:
+              </h3>
               <div class="fieldset-feedback__container">
-                <label class="fieldset-feedback__signature signature signature--big" for="name">Имя*:</label>
-                <input class="fieldset-feedback__field field" type="text" id="name" name="name" placeholder="Иван" required>
+                <label class="fieldset-feedback__signature signature signature--big signature--padding" for="name">Имя*:
+                </label>
+                <input class="fieldset-feedback__field field" type="text" id="name" name="name" placeholder="Иван"
+                  required>
               </div>
               <div class="fieldset-feedback__container">
-                <label class="fieldset-feedback__signature signature signature--big" for="surname">Фамилия*:</label>
-                <input class="fieldset-feedback__field field" type="text" id="surname" name="surname" placeholder="Иванов" required>
+                <label class="fieldset-feedback__signature signature signature--big signature--padding"
+                  for="surname">Фамилия*:
+                </label>
+                <input class="fieldset-feedback__field field" type="text" id="surname" name="surname"
+                  placeholder="Иванов" required>
               </div>
               <div class="fieldset-feedback__container">
-                <label class="fieldset-feedback__signature signature signature--big" for="patronymic">Отчество:</label>
-                <input class="fieldset-feedback__field field" type="text" id="patronymic" name="patronymic" placeholder="Иванович">
+                <label class="fieldset-feedback__signature signature signature--big signature--padding"
+                  for="patronymic">Отчество:
+                </label>
+                <input class="fieldset-feedback__field field" type="text" id="patronymic" name="patronymic"
+                  placeholder="Иванович">
               </div>
             </fieldset>
             <fieldset class="feedback-form__field fieldset-feedback fieldset-feedback--right">
-              <h3 class="fieldset-feedback__title title">Контактная информация:</h3>
+              <h3 class="fieldset-feedback__title title">Контактная информация:
+              </h3>
               <div class="fieldset-feedback__container">
-                <label class="fieldset-feedback__signature signature signature--big" for="contacts-phone">Контактный телефон*:</label>
+                <label class="fieldset-feedback__signature signature signature--big signature--padding"
+                  for="contacts-phone">Контактный телефон*:
+                </label>
                 <input class="fieldset-feedback__field field field--phone" type="text" id="contacts-phone"
                   name="contacts-phone" placeholder="Введите телефон" required>
-                  <span class="fieldset-feedback__field-element fieldset-feedback__field-element--phone"></span>
+                <span class="fieldset-feedback__field-element fieldset-feedback__field-element--phone">
+                </span>
               </div>
               <div class="fieldset-feedback__container">
-                <label class="fieldset-feedback__signature signature signature--big" for="e-mail">Электронная почта*:</label>
+                <label class="fieldset-feedback__signature signature signature--big signature--padding"
+                  for="e-mail">Электронная почта*:
+                </label>
                 <input class="fieldset-feedback__field field field--email" type="email" id="e-mail" name="e-mail"
                   placeholder="Введите e-mail" required>
-                  <span class="fieldset-feedback__field-element fieldset-feedback__field-element--mail"></span>
+                <span class="fieldset-feedback__field-element fieldset-feedback__field-element--mail">
+                </span>
               </div>
             </fieldset>
             <fieldset class="feedback-form__radio fieldset-feedback">
-              <h3 class="fieldset-feedback__title title">Ваше общее впечатление:</h3>
+              <h3 class="fieldset-feedback__title title">Ваше общее впечатление:
+              </h3>
               <ul class="fieldset-feedback__list">
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
-                    <input class="visually-hidden fieldset-feedback__control-input" type="radio" name="type-of-impressions" value="positive"
-                      checked>
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--radio"></span>
-                    <span class="fieldset-feedback__control-label">Скорее положительное</span>
+                    <input class="visually-hidden fieldset-feedback__control-input" type="radio"
+                      name="type-of-impressions" value="positive" checked="checked">
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--radio">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Скорее положительное
+                    </span>
                   </label>
                 </li>
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
-                    <input class="visually-hidden fieldset-feedback__control-input" type="radio" name="type-of-impressions" value="negative">
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--radio"></span>
-                    <span class="fieldset-feedback__control-label">Скорее отрицательное</span>
+                    <input class="visually-hidden fieldset-feedback__control-input" type="radio"
+                      name="type-of-impressions" value="negative">
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--radio">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Скорее отрицательное
+                    </span>
                   </label>
                 </li>
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
-                    <input class="visually-hidden fieldset-feedback__control-input" type="radio" name="type-of-impressions" value="difficult">
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--radio"></span>
-                    <span class="fieldset-feedback__control-label">Затрудняюсь ответить</span>
+                    <input class="visually-hidden fieldset-feedback__control-input" type="radio"
+                      name="type-of-impressions" value="difficult">
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--radio">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Затрудняюсь ответить
+                    </span>
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="feedback-form__checkbox fieldset-feedback">
-              <h3 class="fieldset-feedback__title title">Посещенные<br>достопримечательности:</h3>
+              <h3 class="fieldset-feedback__title title">Посещенные
+                <br>достопримечательности:
+              </h3>
               <ul class="fieldset-feedback__list fieldset-feedback__list--bottom">
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
-                    <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="devils-bridge" checked>
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox"></span>
-                    <span class="fieldset-feedback__control-label">Мост Дьявола</span>
+                    <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="devils-bridge"
+                      checked="checked">
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Мост Дьявола
+                    </span>
                   </label>
                 </li>
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
-                    <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="bell-mountain" checked>
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox"></span>
-                    <span class="fieldset-feedback__control-label">Гора-Колокол</span>
+                    <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="bell-mountain"
+                      checked="checked">
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Гора-Колокол
+                    </span>
                   </label>
                 </li>
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
-                    <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="slide-park" checked>
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox"></span>
-                    <span class="fieldset-feedback__control-label">Слайд-парк</span>
+                    <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="slide-park"
+                      checked="checked">
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Слайд-парк
+                    </span>
                   </label>
                 </li>
                 <li class="fieldset-feedback__item">
                   <label class="fieldset-feedback__control">
                     <input class="visually-hidden fieldset-feedback__control-input" type="checkbox" name="red-rocks">
-                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox"></span>
-                    <span class="fieldset-feedback__control-label">Красные скалы</span>
+                    <span class="fieldset-feedback__control-mark fieldset-feedback__control-mark--checkbox">
+                    </span>
+                    <span class="fieldset-feedback__control-label">Красные скалы
+                    </span>
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="feedback-form__textarea fieldset-feedback">
-              <label class="fieldset-feedback__title title" for="emotions">Опишите свои эмоции:</label>
+              <label class="fieldset-feedback__title title" for="emotions">Опишите свои эмоции:
+              </label>
               <textarea class="fieldset-feedback__textarea field" id="emotions" name="emotions"
-                placeholder="Опишите подробно все свои восторги" required></textarea>
+                placeholder="Опишите подробно все свои восторги" required>
+                </textarea>
             </fieldset>
             <div class="feedback-form__button-wrapper">
-              <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
-              <span class="feedback-form__signature signature signature--right signature--big signature--form">* — обязательные поля</span>
+              <button class="feedback-form__button button" type="submit">Отправить отзыв
+              </button>
+              <span class="feedback-form__signature signature signature--right signature--big signature--form">* —
+                обязательные поля
+              </span>
             </div>
           </form>
         </div>
@@ -180,36 +233,51 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__contacts contacts">
-        <h2 class="visually-hidden">Посетите наш городок!</h2>
-        <a class="contacts__link link link--big" href="form.html">#visitSEDONA</a>
+        <h2 class="visually-hidden">Посетите наш городок!
+        </h2>
+        <a class="contacts__link link link--big" href="form.html">#visitSEDONA
+        </a>
       </div>
       <div class="main-footer__social">
-        <h2 class="visually-hidden">Давайте дружить!</h2>
+        <h2 class="visually-hidden">Давайте дружить!
+        </h2>
         <ul class="main-footer__list list-network">
           <li class="list-network__item">
             <a class="list-network__link link" href="https://vk.com/htmlacademy"
               aria-label="Сайт социальной сети Вконтакте">
-              <span class="visually-hidden">Мы в Вконтакте</span>
-              <svg class="list-network__icon" width="24" height="14" focusable="false">
-                <use xlink:href="img/sprite.svg#vkontakte"></use>
-              </svg>
+              <span class="visually-hidden">Мы в Вконтакте
+              </span>
+              <div class="list-network__icon-wrapper">
+                <svg class="list-network__icon" width="24" height="14" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-vk">
+                  </use>
+                </svg>
+              </div>
             </a>
           </li>
           <li class="list-network__item">
             <a class="list-network__link link" href="https://t.me/htmlacademy" aria-label="Мессенджер Телеграмм">
-              <span class="visually-hidden">Мы в Телеграмме</span>
-              <svg class="list-network__icon" width="22" height="18" focusable="false">
-                <use xlink:href="img/sprite.svg#telegramm"></use>
-              </svg>
+              <span class="visually-hidden">Мы в Телеграмме
+              </span>
+              <div class="list-network__icon-wrapper">
+                <svg class="list-network__icon" width="22" height="18" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-telegramm">
+                  </use>
+                </svg>
+              </div>
             </a>
           </li>
           <li class="list-network__item">
             <a class="list-network__link link" href="https://www.youtube.com/user/htmlacademyru"
               aria-label="Сайт YouTube">
-              <span class="visually-hidden">Мы в Ютюбе</span>
-              <svg class="list-network__icon" width="20" height="14" focusable="false">
-                <use xlink:href="img/sprite.svg#youtube"></use>
-              </svg>
+              <span class="visually-hidden">Мы в Ютюбе
+              </span>
+              <div class="list-network__icon-wrapper">
+                <svg class="list-network__icon" width="20" height="14" focusable="false">
+                  <use xlink:href="img/sprite.svg#icon-youtube">
+                  </use>
+                </svg>
+              </div>
             </a>
           </li>
         </ul>
@@ -217,9 +285,11 @@
       <div class="main-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"
           aria-label="Сайт HTML Academy">Разработано
-          <span class="visually-hidden">HTML Academy</span>
-          <svg class="copyright-link__icon" width="24" height="29" aria-label="Иконка HTMLAcademy" focusable="false">
-            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          <span class="visually-hidden">HTML Academy
+          </span>
+          <svg class="copyright__icon" width="24" height="29" aria-label="Иконка HTMLAcademy" focusable="false">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy">
+            </use>
           </svg>
         </a>
       </div>
@@ -227,24 +297,31 @@
   </footer>
   <div class="modal-container modal-container--close">
     <div class="modal-container__error modal-container--inactive">
-      <h2 class="modal-error__title title title--big">Что-то пошло<br> не так!</h2>
+      <h2 class="modal-error__title title title--big">Что-то пошло
+        <br>не так!
+      </h2>
       <p class="modal-error__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их
-      заполнить</p>
-      <button class="modal-error__button button button--text-small" type="button">OK</button>
+        заполнить
+      </p>
+      <button class="modal-error__button button button--text-small" type="button">OK
+      </button>
     </div>
     <div class="modal-container__normal">
       <div class="modal-normal__wrapper">
-        <h2 class="modal-normal__title title title--big">Ваш отзыв отправлен!</h2>
-        <p class="modal-normal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В
-          ближайшее время мы опубликуем его на сайте.</p>
+        <h2 class="modal-normal__title title title--big">Ваш отзыв отправлен!
+        </h2>
+        <p class="modal-normal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.
+          <br>В ближайшее время мы опубликуем его на сайте.
+        </p>
       </div>
       <div class="modal-normal__wrapper-button modal-normal__wrapper-button--creative">
-        <button class="modal-normal__button button button--text-small" type="button">Закрыть окно</button>
+        <button class="modal-normal__button button button--text-small" type="button">Закрыть окно
+        </button>
       </div>
     </div>
   </div>
-
-<script src="./js/script.js"></script>
+  <script src="./js/script.js">
+  </script>
 </body>
 
 </html>
