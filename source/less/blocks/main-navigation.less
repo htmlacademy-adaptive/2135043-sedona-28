@@ -98,22 +98,26 @@
 
     &:hover {
       background-color: #669ec0;
+      transition: background-color 0.5s;
     }
 
     &:active {
       background-color: #5496bd;
       color: rgba(255, 255, 255, 0.2);
+      transition: background-color, color 0.5s;
     }
   }
 
   @media (min-width: @tablet-width) {
     &:hover {
       color: @blue;
+      transition: color 0.5s;
     }
 
     &:active {
       color: @black;
       opacity: 30%;
+      transition: color, opacity 0.5s;
     }
   }
 }
@@ -143,6 +147,7 @@
   border: 0;
   z-index: 3;
   cursor: pointer;
+  transition: opacity 0.5s;
 
   @media (min-width: @tablet-width) {
     display: none;

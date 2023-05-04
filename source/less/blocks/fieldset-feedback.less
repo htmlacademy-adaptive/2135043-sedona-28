@@ -62,43 +62,29 @@
   z-index: 1;
   width: 57px;
   height: 57px;
+  padding: 20px;
   bottom: 0;
   right: 0;
   background-color: @gray;
 }
 
-.fieldset-feedback__field-element--phone {
-  &::after {
-    position: absolute;
-    content: "";
-    z-index: 1;
-    width: 18px;
-    height: 18px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    mask: url("../img/sprite.svg#icon-phone") no-repeat center center / contain;
-    background-color: @black;
-  }
+.fieldset-feedback__icon-phone {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  top: 20px;
+  right: 20px;
 }
 
-.fieldset-feedback__field-element--mail {
-  &::after {
-    position: absolute;
-    content: "";
-    z-index: 1;
-    width: 18px;
-    height: 18px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    margin: auto;
-    mask: url("../img/sprite.svg#icon-mail") no-repeat center center / contain;
-    background-color: @black;
-  }
+.fieldset-feedback__icon-mail {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  top: 20px;
+  right: 20px;
 }
 
 .fieldset-feedback__container:not(:last-child) {
@@ -187,6 +173,8 @@
 }
 
 .fieldset-feedback__control-input + .fieldset-feedback__control-mark {
+  transition: background-color 0.5s;
+
   &:hover {
     background-color: #e5e5e5;
     cursor: pointer;

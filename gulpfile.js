@@ -76,7 +76,7 @@ const svg = () => {
 }
 
 const sprite = () => {
-  return gulp.src('source/img/icon/*.svg')
+  return gulp.src('source/img/icon-sprite/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
