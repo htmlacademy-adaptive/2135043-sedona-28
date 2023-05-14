@@ -28,6 +28,8 @@
   flex-wrap: wrap;
   gap: 24px;
   padding: 36px 0 28px;
+  max-width: 280px;
+  margin: 0 auto;
 
   @media (max-width: @mobile-width-only) {
     &::after {
@@ -43,14 +45,13 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 648px;
-    padding: 64px 106px 108px;
+    max-width: 435px;
+    padding: 64px 0 108px;
     gap: 20px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 960px;
-    padding: 115px 262px 68px;
+    padding: 115px 0 68px;
     gap: 31px;
   }
 }

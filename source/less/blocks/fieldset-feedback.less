@@ -60,8 +60,8 @@
   position: absolute;
   content: "";
   z-index: 1;
-  width: 57px;
-  height: 57px;
+  width: 58px;
+  height: 58px;
   padding: 20px;
   bottom: 0;
   right: 0;
@@ -73,8 +73,11 @@
   content: "";
   width: 18px;
   height: 18px;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .fieldset-feedback__icon-mail {
@@ -83,8 +86,11 @@
   z-index: 1;
   width: 18px;
   height: 18px;
-  top: 20px;
-  right: 20px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .fieldset-feedback__container:not(:last-child) {
@@ -107,16 +113,6 @@
     width: 648px;
     padding: 0 36px;
   }
-
-  @media (min-width: @desktop-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 960px;
-    margin: 17px 0 0 0;
-    padding: 0 53px;
-  }
 }
 
 .fieldset-feedback__list--bottom {
@@ -131,6 +127,28 @@
   }
 }
 
+.fieldset-feedback__list--radio-grid {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 280px 280px 248px;
+    gap: 28px;
+    width: 960px;
+    margin: 17px 0 0 0;
+    padding: 0 40px 0 53px;
+  }
+}
+
+.fieldset-feedback__list--checkbox-grid {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    gap: 62px;
+    width: 960px;
+    margin: 31px 0 0 0;
+    padding: 0 45px;
+  }
+}
+
 .fieldset-feedback__item {
   text-align: start;
 }
@@ -138,7 +156,7 @@
 .fieldset-feedback__control {
   position: relative;
   display: block;
-  padding-left: 64px;
+  padding-left: 62px;
 }
 
 .fieldset-feedback__control-mark {
@@ -206,8 +224,7 @@
     left: 0;
     right: 0;
     margin: auto;
-    mask: url("../img/icon/icon-checkbox.svg") no-repeat center center / cover;
-    background-color: @black;
+    background: url("../img/icon-checkbox.svg") no-repeat center center / cover;
   }
 }
 
@@ -224,12 +241,12 @@
 
 .fieldset-feedback__textarea {
   width: 280px;
-  min-height: 150px;
+  height: 150px;
   padding: 16px;
 
   @media (min-width: @tablet-width) {
     width: 648px;
-    min-height: 160px;
+    height: 160px;
   }
 
   @media (min-width: @desktop-width) {

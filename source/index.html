@@ -9,6 +9,8 @@
     <link rel="icon" href="favicons/favicon-32x32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> <!-- 180×180 -->
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
   </head>
 
   <body class="page__body">
@@ -59,8 +61,7 @@
               <path
                 d="M86.7498 40.5206C83.2798 41.5162 78.7192 39.3259 84.2712 38.2308C87.7412 37.5338 91.4095 38.9277 86.7498 40.5206C86.8489 40.5206 86.6507 40.5206 86.7498 40.5206Z"
                 fill="#DC6243" />
-              <path d="M91.112 40.421C90.418 38.7285 91.7068 36.8369 93.7888 38.2307C95.5734 39.4255 92.8965 41.3171 91.112
-              40.421Z"
+              <path d="M91.112 40.421C90.418 38.7285 91.7068 36.8369 93.7888 38.2307C95.5734 39.4255 92.8965 41.3171 91.112 40.421Z"
                 fill="#DC6243" />
               <path
               d="M88.1378 45.0008C85.7584 44.3039 77.7278 44.4034 82.9824 42.2131C84.6678 41.6158 93.0949 42.4122 88.1378 45.0008Z"
@@ -102,14 +103,14 @@
                 fill="white" />
             </svg>
           </a>
-          <nav class="main-header__navigation main-navigation main-navigation--closed main-navigation--nojs">
+          <nav class="main-header__navigation main-navigation main-navigation--opened main-navigation--nojs">
             <button class="main-navigation__toggle" type="button">
               <span class="visually-hidden">Открыть меню</span>
             </button>
             <div class="main-navigation__wrapper">
               <ul class="main-navigation__list">
                 <li class="main-navigation__item main-navigation__item--current">
-                  <a class="main-navigation__link link" href="#">Главная</a>
+                  <a class="main-navigation__link link">Главная</a>
                 </li>
                 <li class="main-navigation__item">
                   <a class="main-navigation__link link" href="catalog.html">Фото и видео</a>
@@ -134,8 +135,15 @@
             <div class="hero__wrapper hero__wrapper--vector">
               <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
               <picture>
-                <source media="(min-width: 768px)" srcset="img/hero/mountains_big_tablet_desktop.jpg, img/hero/mountains_big_tablet_desktop@2x.jpg 2x">
-                <img class="hero__image-index-mountains" src="img/hero/mountains_index_mobile.jpg" srcset="img/hero/mountains_index_mobile@2x.jpg 2x" width="901" height="389" alt="Горы Седоны с высоты птичьего полета.">
+                <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/mountains_index_desktop.webp 1x,
+                img/hero/mountains_index_desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/mountains_index_tablet.webp 1x, img/hero/mountains_index_tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/hero/mountains_index_mobile.webp 1x,
+                img/hero/mountains_index_mobile@2x.webp 2x">
+                <source media="(min-width: 1200px)" srcset="img/hero/mountains_index_desktop.jpg 1x,
+                img/hero/mountains_index_desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/hero/mountains_index_tablet.jpg 1x, img/hero/mountains_index_tablet@2x.jpg 2x">
+                <img class="hero__image-index-mountains" src="img/hero/mountains_index_mobile.jpg" srcset="img/hero/mountains_index_mobile@2x.jpg 2x" width="320" height="389" alt="Горы Седоны с высоты птичьего полета.">
               </picture>
               <picture>
                 <source media="(min-width: 768px)" srcset="img/hero/title_welcome_big.svg">
@@ -146,7 +154,7 @@
           <section class="advantages">
             <div class="advantages__wrapper">
               <header class="advantages__header">
-                <h2 class="advantages__title-header title">Седона — небольшой <br>городок в Аризоне, заслуживающий большего!</h2>
+                <h2 class="advantages__title-header title">Седона — небольшой городок&nbsp;в Аризоне, заслуживающий большего!</h2>
                 <p class="advantages__description-header description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
               </header>
               <ul class="advantages__list-image">
@@ -158,9 +166,13 @@
                   </div>
                   <div class="advantages__picture-wrapper">
                     <picture>
-                      <source media="(min-width: 1200px)" srcset="img/advantages/sedona_street_desktop.jpg, img/advantages/sedona_street_desktop@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/advantages/sedona_street_tablet.jpg, img/advantages/sedona_street_tablet@2x.jpg 2x">
-                      <img class="advantages__picture" src="img/advantages/sedona_street_mobile.jpg" srcset="img/advantages/sedona_street_mobile@2x.jpg 2x" width="520" height="260" alt="Улица города Седона.">
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/sedona_street_desktop.webp 1x, img/advantages/sedona_street_desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/sedona_street_tablet.webp 1x, img/advantages/sedona_street_tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/advantages/sedona_street_mobile.webp 1x,
+                      img/advantages/sedona_street_mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" srcset="img/advantages/sedona_street_desktop.jpg 1x, img/advantages/sedona_street_desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/advantages/sedona_street_tablet.jpg 1x, img/advantages/sedona_street_tablet@2x.jpg 2x">
+                      <img class="advantages__picture" src="img/advantages/sedona_street_mobile.jpg" srcset="img/advantages/sedona_street_mobile@2x.jpg 2x" width="320" height="260" loading="lazy" alt="Улица города Седона.">
                     </picture>
                   </div>
                   <ul class="advantages__list-advice list-advice">
@@ -168,14 +180,14 @@
                       <svg class="list-advice__icon-housing" aria-hidden="true" focusable="false" width="75" height="72" viewBox="0 0 75 72" fill="currentColor">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M72.9 39.18 75 37.1l-9.94-9.84V.4H51.2v13.12L37.45 0 0 37.2l2.1 2.08 7.84-7.76v37.6H6.02V72h64.16v-2.88h-5.12v-37.7l7.83 7.76ZM54.11 3.38h7.93v20.98l-7.93-7.85V3.38Zm7.93 65.64h-49.1V28.54l24.5-24.36 24.6 24.36v40.48Zm-31.93-4.48h16.06V40.77H30.12v23.77Zm13.05-2.88H33.03v-18h10.14v18ZM37.85 35.3a7.78 7.78 0 0 1-7.73-7.75 7.63 7.63 0 0 1 7.73-7.66 7.72 7.72 0 0 1 7.83 7.66 7.8 7.8 0 0 1-7.83 7.75Zm5.02-7.75a5.01 5.01 0 0 0-10.04 0 5.01 5.01 0 0 0 10.04 0ZM20.08 40.77h-3.01v3.88h3.01v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Zm-3.01 5.97h-3.01v3.88h3.01v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Zm29.12-5.97H49.2v3.88h3v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Zm-3.01 5.97H49.2v3.88h3v-3.88Zm3.01 0h3.01v3.88h-3v-3.88Z" fill="currentColor"/>
                       </svg>
-                      <h3 class="list-advice__title title title--left">Жилье</h3>
+                      <h4 class="list-advice__title title title--left">Жилье</h4>
                       <p class="list-advice__description description description--left">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                     </li>
                     <li class="list-advice__item list-advice__item--bottom-food">
                       <svg class="list-advice__icon-food" aria-hidden="true" focusable="false" width="76" height="69" viewBox="0 0 76 69" fill="currentColor">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M70.53 30.37c.02-.82.06-1.94-.02-2.23C69.81 12.52 55.45 0 37.8 0S5.69 12.52 4.99 28.14v3H70.5l.02-.77ZM37.8 3c15.96 0 29.12 11.22 29.72 25.14H7.98C8.68 14.22 21.84 3 37.8 3ZM21.24 42.86l-5.38-4-5.49 4L4 38.16l1.8-2.4 4.58 3.3 5.49-4 5.38 4 5.49-4 5.49 4 5.48-4 5.39 4 5.48-4 5.49 4 5.48-4 5.49 4 4.59-3.3 1.7 2.4-6.3 4.7-5.48-4-5.48 4-5.49-4-5.48 4-5.39-4-5.48 4-5.49-4-5.49 4ZM4.3 46.06H71.7c2.4 0 4.29 2.01 4.29 4.21v3.5c0 2.41-2 4.31-4.29 4.31h-1v1c0 5.41-4.38 9.92-9.87 9.92H15.16a9.92 9.92 0 0 1-9.87-9.91v-1h-1c-2.4 0-4.29-1.9-4.29-4.21v-3.5c0-2.31 1.9-4.31 4.29-4.31ZM60.94 66c3.79 0 6.88-3.1 6.88-6.91v-1H8.18v1c0 3.8 3.09 6.9 6.88 6.9h45.88Zm10.77-10.92c.7 0 1.3-.6 1.3-1.3h.1v-3.4c0-.7-.6-1.3-1.3-1.3H4.3c-.7 0-1.3.6-1.3 1.2v3.5c0 .7.6 1.3 1.3 1.3H71.7ZM39.9 15.62a2 2 0 1 1-4 .01 2 2 0 0 1 4 0Zm-9.98-3a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm17.95-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z" fill="currentColor"/>
                       </svg>
-                      <h3 class="list-advice__title title title--left">Еда</h3>
+                      <h4 class="list-advice__title title title--left">Еда</h4>
                       <p class="list-advice__description description description--left">Всегда заказывайте фирменный бургер,
                         <br>вы не разочаруетесь!</p>
                     </li>
@@ -183,7 +195,7 @@
                       <svg class="list-advice__icon-souvenirs" aria-hidden="true" focusable="false" width="63" height="75" viewBox="0 0 63 75" fill="currentColor">
                         <path d="M60.2 22.12H35.8c13.6-6.8 14.7-11.1 14.2-13.5-1.1-3.9-5.6-6.9-9.8-5.3-5.5 2.1-7 10.3-8.5 16.2-1.9-6-3.7-13.6-8-17.5-1.2-1.1-3-2.2-5.7-2-4 .4-9.7 5.3-7.3 10.8 2.2 5.3 9.5 8.7 14.4 11.4H2.8a2.8 2.8 0 0 0-2.8 2.8v11.2c0 1.6 1.3 2.8 2.8 2.8h.3V75h57V39.01h.1c1.6 0 2.8-1.3 2.8-2.8v-11.2c0-1.6-1.3-2.9-2.8-2.9ZM41.8 5.82c2.1-.3 4.9 1.3 5.2 3.2.4 2.7-3.3 5.2-5 6.3-2.5 1.7-4.9 2.6-7.2 4 .8-3.7 2.5-12.9 7-13.5Zm-22.6 9.8c-2.2-1.5-6.4-4.4-6.3-7.7.1-3.6 5.7-6.5 8.7-3.8 3.8 3.3 5.6 11 7 16.4-3.2-1.6-6.2-2.8-9.4-4.9ZM25.1 72H6V39.01h19.1v33Zm0-35.99H3v-10.9h22.1v10.9Zm10 36H28V25.1h7.1v46.9Zm22 0h-19V39h19.1v33h-.1ZM60 36H38.1v-10.9H60v10.9Z" fill="currentColor"/>
                       </svg>
-                      <h3 class="list-advice__title title title--left">Сувениры</h3>
+                      <h4 class="list-advice__title title title--left">Сувениры</h4>
                       <p class="list-advice__description description description--left">Не только китайского,
                         <br>но и местного производства!</p>
                     </li>
@@ -197,23 +209,26 @@
                   </div>
                   <div class="advantages__picture-wrapper">
                     <picture>
-                      <source media="(min-width: 1200px)" srcset="img/advantages/devils_bridge_desktop.jpg, img/advantages/devils_bridge_desktop@2x.jpg 2x">
-                      <source media="(min-width: 768px)" srcset="img/advantages/devils_bridge_tablet.jpg, img/advantages/devils_bridge_tablet@2x.jpg 2x">
-                      <img class="advantages__picture" src="img/advantages/devils_bridge_mobile.jpg" srcset="img/advantages/devils_bridge_mobile@2x.jpg 2x" width="520" height="260" alt="Мост Дьявола в каньоне города Седона.">
+                      <source type="image/webp" media="(min-width: 1200px)" srcset="img/advantages/devils_bridge_desktop.webp 1x, img/advantages/devils_bridge_desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)" srcset="img/advantages/devils_bridge_tablet.webp 1x, img/advantages/devils_bridge_tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/advantages/devils_bridge_mobile.webp 1x, img/advantages/devils_bridge_mobile@2x.webp 2x">
+                      <source media="(min-width: 1200px)" srcset="img/advantages/devils_bridge_desktop.jpg 1x, img/advantages/devils_bridge_desktop@2x.jpg 2x">
+                      <source media="(min-width: 768px)" srcset="img/advantages/devils_bridge_tablet.jpg 1x, img/advantages/devils_bridge_tablet@2x.jpg 2x">
+                      <img class="advantages__picture" src="img/advantages/devils_bridge_mobile.jpg" srcset="img/advantages/devils_bridge_mobile@2x.jpg 2x" width="320" height="260" loading="lazy" alt="Мост Дьявола в каньоне города Седона.">
                     </picture>
                   </div>
                 </li>
-                <li class="advantages__item-square advantages__item--base-color">
+                <li class="advantages__item-square advantages__item-square--base-color">
                   <h3 class="advantages__title title title--size-short">Небольшая площадь</h3>
                   <span class="advantages__number">— №3 —</span>
                   <p class="advantages__description description">Все интересные места находятся очень близко</p>
                 </li>
-                <li class="advantages__item-road advantages__item--base-color">
+                <li class="advantages__item-road advantages__item-road--base-color">
                   <h3 class="advantages__title title">Красивая<br>дорога</h3>
                   <span class="advantages__number">— №4 —</span>
                   <p class="advantages__description description">Ехать в Седону из Лас-Вегаса совсем <br>не скучно!</p>
                 </li>
-                <li class="advantages__item-tourists advantages__item--base-color">
+                <li class="advantages__item-tourists advantages__item-tourists--base-color">
                   <h3 class="advantages__title title">Мало<br>туристов</h3>
                   <span class="advantages__number">— №5 —</span>
                   <p class="advantages__description description description--size-canyon">Большинство едет в Гранд Каньон и толпится там</p>
@@ -228,19 +243,23 @@
                 <p class="search-hotels__description description">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
                 <a class="search-hotels__button button" href="#">Найти Гостиницу</a>
               </div>
-              <a class="search-hotels__link" href="https://goo.gl/maps/v9SCnkg5omrAXFCs5">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map_desktop.webp, img/map/map_desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map_tablet.webp, img/map/map_tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/map/map_mobile.webp, img/map/map_mobile@2x.webp 2x">
-                  <source media="(min-width: 1200px)" srcset="img/map/map_desktop.jpg, img/map/map_desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/map/map_tablet.jpg, img/map/map_tablet@2x.jpg 2x">
-                  <img class="search-hotels__picture" src="img/map/map_mobile.jpg" srcset="img/map/map_mobile@2x.jpg 2x" width="320" height="350" alt="Карта для поиска гостиниц в Седоне.">
-                </picture>
-                <svg class="search-hotels__icon" width="27" height="27" focusable="false">
-                  <use xlink:href="img/sprite.svg#icon-map-marker"></use>
-                </svg>
-              </a>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52385.1817334607!2d-111.83633811881421!3d34.854371453263866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1683308126484!5m2!1sru!2sru" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Координаты города на карте">
+              </iframe>
+              <noscript>
+                <a class="search-hotels__link" href="https://goo.gl/maps/v9SCnkg5omrAXFCs5">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map_desktop.webp 1x, img/map/map_desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map_tablet.webp 1x, img/map/map_tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/map/map_mobile.webp 1x, img/map/map_mobile@2x.webp 2x">
+                    <source media="(min-width: 1200px)" srcset="img/map/map_desktop.jpg 1x, img/map/map_desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/map/map_tablet.jpg 1x, img/map/map_tablet@2x.jpg 2x">
+                    <img class="search-hotels__picture" src="img/map/map_mobile.jpg" srcset="img/map/map_mobile@2x.jpg 2x" width="320" height="350" loading="lazy" alt="Карта для поиска гостиниц в Седоне.">
+                  </picture>
+                  <svg class="search-hotels__icon" width="27" height="27" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-map-marker"></use>
+                  </svg>
+                </a>
+              </noscript>
             </div>
           </section>
         </div>
@@ -292,13 +311,12 @@
           <div class="main-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">Разработано
               <span class="visually-hidden">HTML Academy</span>
-              <svg class="copyright__icon" width="24" height="29" aria-label="Иконка HTMLAcademy" focusable="false">
+              <svg class="copyright__icon" width="27" height="34" aria-label="Иконка HTMLAcademy" focusable="false" preserveAspectRatio="none">
                 <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
               </svg>
             </a>
           </div>
         </div>
-
       </footer>
       <script src="./js/script.js">
       </script>
