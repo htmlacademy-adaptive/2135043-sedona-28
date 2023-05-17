@@ -68,7 +68,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     width: 274px;
-    gap: 52px;
+    gap: 51px;
     padding: 0 10px;
     background-color: @white;
     color: @black;
@@ -254,4 +254,31 @@
 .main-navigation--nojs .main-navigation__item,
 .main-navigation--nojs .main-navigation__user-item {
   display: block;
+}
+
+.main-navigation--nojs ~ a {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 60px;
+    display: block;
+    width: 160px;
+    height: 80px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
+
+    .main-header__logo-icon {
+      width: 160px;
+      height: 80px;
+    }
+  }
 }

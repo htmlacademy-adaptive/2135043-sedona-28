@@ -18,9 +18,32 @@
   <div class="page__wrapper">
     <header class="main-header">
       <div class="main-header__wrapper">
+        <nav class="main-header__navigation main-navigation main-navigation--opened main-navigation--nojs">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-navigation__wrapper">
+            <ul class="main-navigation__list">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link link" href="index.html">Главная</a>
+              </li>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link link" href="catalog.html">Фото и видео</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__user">
+              <li class="main-navigation__user-item main-navigation__user-item--current">
+                <a class="main-navigation__user-link link">Форма отзыва</a>
+              </li>
+              <li class="main-navigation__user-item">
+                <a class="main-navigation__user-link link" href="https://htmlacademy.ru/">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <a class="main-header__logo" href="index.html" aria-label="Сайт Города Седона - главная страница">
           <svg class="main-header__logo-icon" aria-hidden="true" focusable="false" width="185" height="96" viewBox="0 0 185 96"
-          fill="currentColor">
+            fill="currentColor">
             <path d="M185 0H0L79.8097 90.1011C86.8489 97.9663 98.2503 97.9663 105.289 90.1011L185 0Z" fill="#81B3D3" />
             <path d="M42.8296 0.696915L92.0043 58.8395L140.882 1.09515L42.8296 0.696915Z" fill="#23A9E1" />
             <path
@@ -61,8 +84,7 @@
               d="M82.685 30.9629C81.8918 33.4519 80.3055 33.9497 80.5038 30.8634C80.7021 27.3788 82.9824 28.1753 85.3618 26.881C87.3447 25.7859 88.4352 21.7039 91.9052 24.0933C93.4915 25.1885 95.2761 24.2925 95.7718 25.8854C95.7718 25.7859 91.3104 36.14 93.7889 36.14C88.8318 36.14 91.0129 30.266 92.8966 26.2836C91.1121 27.1797 88.1378 32.9541 90.5172 33.8501C89.2284 35.5427 85.3618 37.733 83.3789 36.14C81.8918 35.0449 82.685 32.9541 82.685 30.9629Z"
               fill="#DC6243" />
             <path
-              d="M86.7498 40.5206C83.2798 41.5162 78.7192 39.3259 84.2712 38.2308C87.7412 37.5338 91.4095 38.9277 86.7498
-              40.5206C86.8489 40.5206 86.6507 40.5206 86.7498 40.5206Z"
+              d="M86.7498 40.5206C83.2798 41.5162 78.7192 39.3259 84.2712 38.2308C87.7412 37.5338 91.4095 38.9277 86.7498 40.5206C86.8489 40.5206 86.6507 40.5206 86.7498 40.5206Z"
               fill="#DC6243" />
             <path
               d="M91.112 40.421C90.418 38.7285 91.7068 36.8369 93.7888 38.2307C95.5734 39.4255 92.8965 41.3171 91.112 40.421Z"
@@ -107,29 +129,6 @@
               fill="white" />
           </svg>
         </a>
-        <nav class="main-header__navigation main-navigation main-navigation--opened main-navigation--nojs">
-          <button class="main-navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <div class="main-navigation__wrapper">
-            <ul class="main-navigation__list">
-              <li class="main-navigation__item">
-                <a class="main-navigation__link link" href="index.html">Главная</a>
-              </li>
-              <li class="main-navigation__item">
-                <a class="main-navigation__link link" href="catalog.html">Фото и видео</a>
-              </li>
-            </ul>
-            <ul class="main-navigation__user">
-              <li class="main-navigation__user-item main-navigation__user-item--current">
-                <a class="main-navigation__user-link link">Форма отзыва</a>
-              </li>
-              <li class="main-navigation__user-item">
-                <a class="main-navigation__user-link link" href="https://htmlacademy.ru/">HTML Academy</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </div>
     </header>
     <main class="main-feedback">
@@ -199,8 +198,8 @@
                   </label>
                   <input class="fieldset-feedback__field field field--phone" type="text" id="contacts-phone"
                     name="contacts-phone" placeholder="Введите телефон" required>
-                  <div class="fieldset-feedback__field-element" aria-label="Иконка телефонной трубки">
-                    <svg class="fieldset-feedback__icon-phone" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                  <div class="fieldset-feedback__field-element">
+                    <svg class="fieldset-feedback__icon-phone" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="currentColor"  aria-label="Иконка телефонной трубки">
                       <path
                         d="M3.6 7.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V17c0 .6-.4 1-1 1C7.6 18 0 10.4 0 1c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1L3.6 7.8Z"
                         fill="currentColor" />
@@ -213,8 +212,8 @@
                   </label>
                   <input class="fieldset-feedback__field field field--email" type="email" id="e-mail" name="e-mail"
                     placeholder="Введите e-mail" required>
-                  <div class="fieldset-feedback__field-element" aria-label="Иконка письма">
-                    <svg class="fieldset-feedback__icon-mail" aria-hidden="true" focusable="false" width="18" height="18"   viewBox="0 0 18 18" fill="currentColor">
+                  <div class="fieldset-feedback__field-element">
+                    <svg class="fieldset-feedback__icon-mail" aria-hidden="true" focusable="false" width="18" height="18"   viewBox="0 0 18 18" fill="currentColor"  aria-label="Иконка письма">
                       <path
                         d="M8 8c-.3 0-.5-.1-1-.3L0 4v7c0 .5.5 1 1 1h14c.5 0 1-.5 1-1V4L9 7.7c-.5.2-.7.3-1 .3Zm7-8H1C.5 0 0 .5 0 1v.8L8 6l8-4.2V1c0-.5-.5-1-1-1Z"
                         fill="currentColor" />
