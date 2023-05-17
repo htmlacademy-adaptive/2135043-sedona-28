@@ -110,7 +110,7 @@
   @media (min-width: @tablet-width) {
     transition: color 0.5s, opacity 0.5s;
 
-    &:hover[href] {
+    &:hover {
       color: @blue;
     }
 
@@ -121,15 +121,17 @@
   }
 }
 
-.main-navigation__user-item:last-child a {
-  border-bottom: 0;
+.main-navigation__item .link--current,
+.main-navigation__user-item .link--current {
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: #766357;
+    }
+  }
 }
 
-.main-navigation__item--current,
-.main-navigation__user-item--current {
-  @media (min-width: @tablet-width) {
-    color: #766357;
-  }
+.main-navigation__user-item:last-child a {
+  border-bottom: 0;
 }
 
 .main-navigation__toggle {
