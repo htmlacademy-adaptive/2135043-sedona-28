@@ -3,20 +3,29 @@
   color: @black;
   text-align: center;
   text-transform: uppercase;
-  padding: 0 14px;
+  width: 129px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 1px;
+    width: 155px;
+    padding: 0;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 264px;
   }
 }
 
 .copyright__link {
   display: flex;
   flex-wrap: wrap;
-  gap: 13px;
+  gap: 12px;
   min-height: 35px;
   align-items: center;
   color: @black;
+  transition: color 0.5s;
+  width: 129px;
+  margin-left: auto;
 
   &:hover {
     color: @blue;
@@ -25,26 +34,8 @@
   &:active {
     color: #b3b3b3;
   }
-}
-
-.copyright__link .copyright__title {
-  &:hover {
-    color: @blue;
-  }
-
-  &:active {
-    color: #b3b3b3;
-  }
-}
-
-.copyright__title {
-  font-size: 14px;
-  font-weight: 400;
-  color: @black;
-  margin-block: 0;
 }
 
 .copyright__icon {
-  width: 27px;
-  height: 34px;
+  display: block;
 }

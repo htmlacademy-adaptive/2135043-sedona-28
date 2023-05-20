@@ -68,7 +68,7 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     width: 274px;
-    gap: 52px;
+    gap: 51px;
     padding: 0 10px;
     background-color: @white;
     color: @black;
@@ -95,6 +95,7 @@
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(1, 1, 1, 0.2);
+    transition: background-color 0.5s;
 
     &:hover {
       background-color: #669ec0;
@@ -107,6 +108,8 @@
   }
 
   @media (min-width: @tablet-width) {
+    transition: color 0.5s, opacity 0.5s;
+
     &:hover {
       color: @blue;
     }
@@ -118,14 +121,17 @@
   }
 }
 
-.main-navigation__user-item:last-child a {
-  border-bottom: 0;
+.main-navigation__item .link--current,
+.main-navigation__user-item .link--current {
+  @media (min-width: @tablet-width) {
+    &:hover {
+      color: #766357;
+    }
+  }
 }
 
-.main-navigation__item--current {
-  @media (min-width: @tablet-width) {
-    color: #766357;
-  }
+.main-navigation__user-item:last-child a {
+  border-bottom: 0;
 }
 
 .main-navigation__toggle {
@@ -143,6 +149,7 @@
   border: 0;
   z-index: 3;
   cursor: pointer;
+  transition: opacity 0.5s;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -172,7 +179,16 @@
 
 .main-navigation--closed .main-navigation__wrapper {
   @media (max-width: @mobile-width-only) {
-    display: none;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    min-height: 80vh;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s;
   }
 }
 
@@ -209,6 +225,9 @@
     left: 0;
     z-index: 2;
     min-height: 80vh;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 1s;
   }
 }
 
@@ -237,4 +256,31 @@
 .main-navigation--nojs .main-navigation__item,
 .main-navigation--nojs .main-navigation__user-item {
   display: block;
+}
+
+.main-navigation--nojs ~ a {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 60px;
+    display: block;
+    width: 160px;
+    height: 80px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 60%;
+    }
+
+    &:active {
+      opacity: 30%;
+    }
+
+    .main-header__logo-icon {
+      width: 160px;
+      height: 80px;
+    }
+  }
 }

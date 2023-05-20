@@ -76,8 +76,15 @@ const svg = () => {
 }
 
 const sprite = () => {
-  return gulp.src('source/img/icon/*.svg')
-    .pipe(svgo())
+  return gulp.src('source/img/icon-sprite/*.svg')
+    .pipe(svgo({
+      plugins: [
+        {
+          removeViewBox: false,
+        },
+        'sortAttrs',
+      ],
+    }))
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -132,8 +139,8 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/**/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/js/**/script.js', gulp.series(scripts, reload));
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 //Build

@@ -27,6 +27,8 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  width: 178px;
+  margin-right: auto;
 
   @media (min-width: @desktop-width) {
     gap: 2px;
@@ -50,6 +52,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 14px;
+  max-width: 70px;
 
   @media (min-width: @tablet-width) {
     gap: 9px;
@@ -62,6 +65,7 @@
   opacity: 30%;
   padding: 0 0 5px 0;
   cursor: pointer;
+  transition: opacity 0.5s;
 
   &:hover {
     opacity: 60%;
