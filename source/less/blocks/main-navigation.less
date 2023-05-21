@@ -18,13 +18,10 @@
     flex-direction: row;
     gap: 185px;
     width: 768px;
-    padding: 18px 18px 17px 40px;
   }
 
   @media (min-width: @desktop-width) {
     width: 1200px;
-    gap: 299px;
-    padding: 18px 31px 17px 51px;
   }
 }
 
@@ -40,22 +37,20 @@
 
 
   @media (min-width: @tablet-width) {
-    width: 251px;
+    width: 291px;
     flex-direction: row;
-    gap: 75px;
-    padding: 0 10px;
+    padding-left: 40px;
     background-color: @white;
     color: @black;
   }
 
   @media (min-width: @desktop-width) {
-    width: 398px;
-    gap: 162px;
-    padding: 0 40px;
+    width: 507px;
+    padding: 0 68px 0 61px;
   }
 }
 
-.main-navigation__user {
+.main-navigation__list--user {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -67,26 +62,32 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    width: 274px;
-    gap: 51px;
-    padding: 0 10px;
+    width: 292px;
+    padding-left: 0;
+    padding-right: 18px;
     background-color: @white;
     color: @black;
   }
 
   @media (min-width: @desktop-width) {
-    width: 421px;
-    gap: 138px;
-    padding: 0 40px;
+    width: 508px;
+    padding: 0 41px 0 66px;
   }
 }
 
 .main-navigation__item {
   display: block;
+
+  @media (min-width: @tablet-width) {
+    max-width: 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 164px;
+  }
 }
 
-.main-navigation__item a,
-.main-navigation__user-item a {
+.main-navigation__item a {
   @media (max-width: @mobile-width-only) {
     position: relative;
     font-size: 18px;
@@ -109,6 +110,7 @@
 
   @media (min-width: @tablet-width) {
     transition: color 0.5s, opacity 0.5s;
+    padding: 18px 10px 17px;
 
     &:hover {
       color: @blue;
@@ -119,10 +121,13 @@
       opacity: 30%;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 30px 17px;
+  }
 }
 
-.main-navigation__item .link--current,
-.main-navigation__user-item .link--current {
+.main-navigation__item .link--current {
   @media (min-width: @tablet-width) {
     &:hover {
       color: #766357;
@@ -130,8 +135,14 @@
   }
 }
 
-.main-navigation__user-item:last-child a {
+.main-navigation__item--last a {
   border-bottom: 0;
+}
+
+.main-navigation__item--right {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .main-navigation__toggle {
@@ -253,8 +264,7 @@
   min-height: 0;
 }
 
-.main-navigation--nojs .main-navigation__item,
-.main-navigation--nojs .main-navigation__user-item {
+.main-navigation--nojs .main-navigation__item {
   display: block;
 }
 

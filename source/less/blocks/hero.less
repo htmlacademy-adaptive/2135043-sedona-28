@@ -1,25 +1,49 @@
 .hero {
-  position: relative;
-  min-width: 320px;
+  width: 320px;
+  min-height: 158px;
   background-color: @white;
   color: @brown;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    min-height: 290px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    min-height: 301px;
+  }
 }
 
 .hero__wrapper {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 320px;
-  min-height: 158px;
+  flex-direction: column;
   margin: 0 auto;
+}
+
+.hero__wrapper--index {
+  width: 320px;
+  min-height: 389px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 768px;
+    min-height: 518px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+    min-height: 518px;
+  }
+}
+
+.hero__wrapper--small {
+  width: 320px;
+  min-height: 158px;
+
+  @media (min-width: @tablet-width) {
     width: 768px;
     min-height: 290px;
-    background-position: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,6 +53,9 @@
 }
 
 .hero__image-index-mountains {
+  position: absolute;
+  content: "";
+  inset: 0;
   width: 320px;
   height: 389px;
   background-color: @gray;
@@ -89,9 +116,11 @@
 }
 
 .hero__image-catalog-mountains {
+  position: absolute;
+  content: "";
   width: 320px;
   height: 214px;
-  position: relative;
+  left: 0;
   top: -56px;
   margin-bottom: -56px;
   background-color: @brown;
@@ -113,26 +142,46 @@
 }
 
 .hero__wrapper--vector {
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: 160px;
+    height: 57px;
+    left: 0;
+    bottom: -1px;
+    background: url("../img/hero/hero-vector-small.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
   &::after {
     position: absolute;
     content: "";
     z-index: 2;
-    width: 1200px;
+    width: 160px;
     height: 57px;
+    right: 0;
     bottom: -1px;
-    left: -440px;
-    background: url("../img/hero/hero_vector.svg") no-repeat center bottom / cover;
+    background: url("../img/hero/hero-vector-small.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    transform: scale(-1, 1);
   }
 
   @media (min-width: @tablet-width) {
+    &::before,
     &::after {
-      left: -216px;
+      width: 384px;
+      background: url("../img/hero/hero-vector-tablet.svg");
     }
   }
 
   @media (min-width: @desktop-width) {
+    &::before,
     &::after {
-      left: 0;
+      width: 600px;
+      background: url("../img/hero/hero-vector-desktop.svg");
     }
   }
 }
