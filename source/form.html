@@ -11,7 +11,7 @@
   <link rel="apple-touch-icon" href="favicons/apple-icon-180x180.png"> <!-- 180×180 -->
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body class="page__body">
@@ -31,12 +31,12 @@
                 <a class="main-navigation__link link" href="catalog.html">Фото и видео</a>
               </li>
             </ul>
-            <ul class="main-navigation__user">
-              <li class="main-navigation__user-item">
-                <a class="main-navigation__user-link link link--current" href="#">Форма отзыва</a>
+            <ul class="main-navigation__list main-navigation__list--user">
+              <li class="main-navigation__item">
+                <a class="main-navigation__link link link--current" href="#">Форма отзыва</a>
               </li>
-              <li class="main-navigation__user-item">
-                <a class="main-navigation__user-link link" href="https://htmlacademy.ru/">HTML Academy</a>
+              <li class="main-navigation__item">
+                <a class="main-navigation__link link" href="https://htmlacademy.ru/">HTML Academy</a>
               </li>
             </ul>
           </div>
@@ -135,7 +135,7 @@
       <div class="main-feedback__wrapper">
         <h1 class="visually-hidden">Добро пожаловать на страницу отзывов и обратной связи</h1>
         <section class="hero">
-          <div class="hero__wrapper hero__wrapper-small hero__wrapper--vector">
+          <div class="hero__wrapper hero__wrapper--small hero__wrapper--vector">
             <h2 class="visually-hidden">Горы Седоны с высоты птичьего полета</h2>
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/mountains_index_desktop.webp 1x,
@@ -287,9 +287,8 @@
                 </ul>
               </fieldset>
               <fieldset class="feedback-form__textarea fieldset-feedback">
-                <label class="fieldset-feedback__title title" for="emotions">Опишите свои эмоции:</label>
-                <textarea class="fieldset-feedback__textarea field" id="emotions" name="emotions" placeholder="Опишите подробно  все свои восторги">
-                </textarea>
+                <h3 class="fieldset-feedback__title title" for="emotions">Опишите свои эмоции:</h3>
+                <textarea class="fieldset-feedback__textarea field" id="emotions" name="emotions" placeholder="Опишите подробно  все свои восторги"></textarea>
               </fieldset>
               <div class="feedback-form__button-wrapper">
                 <button class="feedback-form__button button" type="submit">Отправить отзыв</button>
@@ -311,8 +310,7 @@
           <h2 class="visually-hidden">Давайте дружить!</h2>
           <ul class="main-footer__list list-network">
             <li class="list-network__item">
-              <a class="list-network__link link" href="https://vk.com/htmlacademy"
-                aria-label="Сайт социальной сети Вконтакте">
+              <a class="list-network__link link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Мы в Вконтакте</span>
                 <div class="list-network__icon-wrapper">
                   <svg class="list-network__icon" width="24" height="14" focusable="false">
@@ -322,7 +320,7 @@
               </a>
             </li>
             <li class="list-network__item">
-              <a class="list-network__link link" href="https://t.me/htmlacademy" aria-label="Мессенджер Телеграмм">
+              <a class="list-network__link link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграмме</span>
                 <div class="list-network__icon-wrapper">
                   <svg class="list-network__icon" width="22" height="18" focusable="false">
@@ -332,8 +330,7 @@
               </a>
             </li>
             <li class="list-network__item">
-              <a class="list-network__link link" href="https://www.youtube.com/user/htmlacademyru"
-                aria-label="Сайт YouTube">
+              <a class="list-network__link link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютюбе</span>
                 <div class="list-network__icon-wrapper">
                   <svg class="list-network__icon" width="20" height="14" focusable="false">
@@ -345,8 +342,8 @@
           </ul>
         </div>
         <div class="main-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">Разработано
-            <span class="visually-hidden">HTML Academy</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+            <span class="visually-hidden">Сайт разработчика - HTML Academy</span>
             <svg class="copyright__icon" width="27" height="34" aria-label="Иконка HTMLAcademy" focusable="false"
               preserveAspectRatio="none">
               <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
@@ -362,6 +359,8 @@
         заполнить</p>
         <button class="modal-container__error-button button button--text-small" type="button">OK</button>
       </div>
+    </div>
+    <div class="modal-container modal-container--close">
       <div class="modal-container__normal">
         <div class="modal-container__normal-wrapper">
           <h2 class="modal-container__normal-title title title--big">Ваш отзыв отправлен!</h2>

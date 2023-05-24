@@ -11,21 +11,25 @@
   padding: 24px 0 34px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 29px 63px 0;
+    padding: 0 29px 0 0;
+    margin-bottom: 63px;
 
     &::after {
       position: absolute;
       content: "";
       width: 1px;
-      height: 338px;
+      min-height: 100%;
+      height: auto;
       top: -8px;
+      bottom: -7px;
       right: 1px;
       background-color: #dbdbdb;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 50px 71px 0;
+    padding: 0 50px 0 0;
+    margin-bottom: 71px;
   }
 }
 
@@ -141,22 +145,29 @@
 .fieldset-feedback__list--checkbox-grid {
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: repeat(4, min-content);
-    gap: 62px;
+    grid-template-columns: repeat(4, 184px);
+    gap: 45px;
     width: 960px;
     margin: 31px 0 0 0;
     padding: 0 45px;
   }
 }
 
-.fieldset-feedback__item {
-  text-align: start;
+.fieldset-feedback__list--checkbox-grid .fieldset-feedback__item:nth-child(2),
+.fieldset-feedback__list--checkbox-grid .fieldset-feedback__item:nth-child(3) {
+  margin-left: 10px;
 }
 
 .fieldset-feedback__control {
   position: relative;
   display: block;
   padding-left: 62px;
+}
+
+.fieldset-feedback__control-input ~ span {
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .fieldset-feedback__control-mark {
@@ -195,7 +206,6 @@
 
   &:hover {
     background-color: #e5e5e5;
-    cursor: pointer;
   }
 
   &:active {
@@ -236,6 +246,7 @@
 
 .fieldset-feedback__control-label {
   display: block;
+  text-align: start;
   padding: 10px 0;
 }
 
