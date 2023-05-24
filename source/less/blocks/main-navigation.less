@@ -1,5 +1,5 @@
 .main-navigation {
-  min-width: 320px;
+  width: 100%;
   min-height: 56px;
   background-color: @white;
   color: @black;
@@ -135,11 +135,11 @@
   }
 }
 
-.main-navigation__item--last a {
+.main-navigation__list--user .main-navigation__item:last-child a {
   border-bottom: 0;
 }
 
-.main-navigation__item--right {
+.main-navigation__item:nth-child(2n) {
   @media (min-width: @tablet-width) {
     margin-left: auto;
   }
